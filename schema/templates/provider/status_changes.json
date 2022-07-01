@@ -61,7 +61,7 @@
         "associated_ticket": {
           "$id": "#/properties/data/properties/status_changes/items/properties/associated_ticket",
           "$ref": "#/definitions/string",
-          "description": "Identifier for an associated ticket inside an Agency-maintained 311 or CRM system."
+          "description": "Identifier for an associated ticket inside an Agency-mastertained 311 or CRM system."
         }
       },
       "allOf": []

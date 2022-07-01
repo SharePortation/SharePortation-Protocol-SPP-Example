@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/schema/templates/common.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/schema/templates/common.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "Common schema definitions for SPP",
   "definitions": {
@@ -457,8 +457,8 @@
         "compliance_pick_up",
         "decommissioned",
         "located",
-        "maintenance",
-        "maintenance_pick_up",
+        "mastertenance",
+        "mastertenance_pick_up",
         "missing",
         "off_hours",
         "on_hours",
@@ -515,7 +515,7 @@
                   "battery_charged",
                   "comms_restored",
                   "located",
-                  "maintenance",
+                  "mastertenance",
                   "on_hours",
                   "provider_drop_off",
                   "reservation_cancel",
@@ -556,7 +556,7 @@
                   "battery_low",
                   "comms_restored",
                   "located",
-                  "maintenance",
+                  "mastertenance",
                   "off_hours",
                   "system_suspend",
                   "unspecified"
@@ -596,7 +596,7 @@
                   "compliance_pick_up",
                   "decommissioned",
                   "located",
-                  "maintenance_pick_up",
+                  "mastertenance_pick_up",
                   "rebalance_pick_up",
                   "unspecified"
                 ]

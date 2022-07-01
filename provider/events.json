@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/provider/events.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/provider/events.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "Schema for SPP Provider events payloads",
   "type": "object",
@@ -220,8 +220,8 @@
         "compliance_pick_up",
         "decommissioned",
         "located",
-        "maintenance",
-        "maintenance_pick_up",
+        "mastertenance",
+        "mastertenance_pick_up",
         "missing",
         "off_hours",
         "on_hours",
@@ -421,7 +421,7 @@
               "associated_ticket": {
                 "$id": "#/properties/data/properties/status_changes/items/properties/associated_ticket",
                 "$ref": "#/definitions/string",
-                "description": "Identifier for an associated ticket inside an Agency-maintained 311 or CRM system."
+                "description": "Identifier for an associated ticket inside an Agency-mastertained 311 or CRM system."
               }
             },
             "allOf": [
@@ -440,7 +440,7 @@
                             "battery_charged",
                             "comms_restored",
                             "located",
-                            "maintenance",
+                            "mastertenance",
                             "on_hours",
                             "provider_drop_off",
                             "reservation_cancel",
@@ -481,7 +481,7 @@
                             "battery_low",
                             "comms_restored",
                             "located",
-                            "maintenance",
+                            "mastertenance",
                             "off_hours",
                             "system_suspend",
                             "unspecified"
@@ -521,7 +521,7 @@
                             "compliance_pick_up",
                             "decommissioned",
                             "located",
-                            "maintenance_pick_up",
+                            "mastertenance_pick_up",
                             "rebalance_pick_up",
                             "unspecified"
                           ]

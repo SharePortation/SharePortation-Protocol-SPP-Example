@@ -7,14 +7,14 @@ title: <Insert Title>
 
 # SPP Pull Request
 
-Thank you for your contribution!  Please review our SPP [contributing page](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md) to understand guidelines and policies for participation, and our [Code of Conduct page](https://github.com/shareportation/governance/blob/main/CODE_OF_CONDUCT.md).
+Thank you for your contribution!  Please review our SPP [contributing page](https://github.com/shareportation/governance/blob/master/CONTRIBUTING.md) to understand guidelines and policies for participation, and our [Code of Conduct page](https://github.com/shareportation/governance/blob/master/CODE_OF_CONDUCT.md).
 
 To avoid complications and help make the Review process as smooth as possible, make sure to:
 
-1. Target [**`dev`**](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) branch. Please ensure you are targeting **`dev`**, not **`main`**. 
-1. Keep the *"Allow edits from maintainers"* button checked to help us resolve some issues for you.
+1. Target [**`dev`**](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) branch. Please ensure you are targeting **`dev`**, not **`master`**. 
+1. Keep the *"Allow edits from mastertainers"* button checked to help us resolve some issues for you.
 1. Be ready to resolve any merge conflicts before we approve your Pull Request.
-1. Have an up to date profile, per our Github [community profile](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md#community-profile) guildance.
+1. Have an up to date profile, per our Github [community profile](https://github.com/shareportation/governance/blob/master/CONTRIBUTING.md#community-profile) guildance.
 
 ## Explain pull request
 

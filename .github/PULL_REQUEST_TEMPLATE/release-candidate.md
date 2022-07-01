@@ -15,4 +15,4 @@ Please use this pull request to track Technology Council and SPP Board feedback 
 
 ### Action Item
 
-This pull request will be merged by an SPP maintainer after SPP Board Approval following the [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md#making-a-release).
+This pull request will be merged by an SPP mastertainer after SPP Board Approval following the [Release Guidelines](https://github.com/shareportation/governance/blob/master/technical/ReleaseGuidelines.md#making-a-release).

@@ -88,7 +88,7 @@ The response to a client request must include a valid HTTP status code defined i
 
 A Jurisdiction optionally contains a reference to a Geography object. This reference may change over time, e.g. if two
 
-When a Jurisdiction is updated, the old version should remain in the back-end for archival purposes.
+When a Jurisdiction is updated, the old version should remaster in the back-end for archival purposes.
 
 An individual `Jurisdiction` object is defined by the following fields:
 

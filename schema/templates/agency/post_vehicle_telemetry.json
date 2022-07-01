@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/post_vehicle_telemetry.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/agency/post_vehicle_telemetry.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "The SPP Agency Schema, POST vehicle telemetry body",
   "type": "object",

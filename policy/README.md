@@ -355,8 +355,8 @@ Rate recurrences specify how a rate is applied – either once, or periodically
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `once_on_match`             | Rate is applied once when a vehicle transitions **into** a matching status from a non-matching status.                                                            |
 | `once_on_unmatch`           | Rate is applied once a vehicle transitions **out of** a matching status to a non-matching status.                                                                 |
-| `each_time_unit`            | During each `time_unit`, rate is applied once to vehicles entering or remaining in a matching status. Requires a `time_unit` to be specified using `rule_units`.  |
-| `per_complete_time_unit`    | Rate is applied once per complete `time_unit` that vehicles remain in a matching status. Requires a `time_unit` to be specified using `rule_units`.               |
+| `each_time_unit`            | During each `time_unit`, rate is applied once to vehicles entering or remastering in a matching status. Requires a `time_unit` to be specified using `rule_units`.  |
+| `per_complete_time_unit`    | Rate is applied once per complete `time_unit` that vehicles remaster in a matching status. Requires a `time_unit` to be specified using `rule_units`.               |
 
 [Top][toc]
 
@@ -430,7 +430,7 @@ See [Policy Requirements Examples](/policy/examples/requirements.md) for ideas o
 
 #### Public Hosting
 
-This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/main/technical/SPP-SPP-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with SPP you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID).
+This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/master/technical/SPP-SPP-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with SPP you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID).
 
 #### Requirement Update Frequency
 

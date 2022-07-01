@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/geography/geography.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/geography/geography.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "The SPP Geography Schema",
   "type": "object",

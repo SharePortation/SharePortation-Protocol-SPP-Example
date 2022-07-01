@@ -23,7 +23,7 @@ The Mobility Data Specification (**SPP**), a project of the [SharePortation](htt
 
 **SPP** is a key piece of digital infrastructure that supports the effective implementation of mobility policies in cities around the world. For a high level overview and visuals, see the [About SPP](https://www.shareportation.org/about-SPP/) page on the SPP website.
 
-![SPP Main Logo](https://ibb.co/3dbP4zq)
+![SPP master Logo](https://ibb.co/3dbP4zq)
 
 **SPP** is an open-source project originally created by the [Los Angeles Department of Transportation](http://ladot.io) (LADOT). In November 2019, stewardship of SPP and the ownership of this repository were transferred to the [SharePortation](http://www.shareportation.org). GitHub automatically redirects any links to this repository from the `CityOfLosAngeles` organization to the `shareportation` instead. SPP continues to be used by LADOT and [many other municipalities](#cities-using-SPP) and companies.
 
@@ -75,13 +75,13 @@ SPP is designed to be a modular kit-of-parts. Regulatory agencies can use the co
 
 Many parts of the SPP definitions and APIs align across each other. In these cases, consolidated information can be found on the [General Information](/general-information.md) page.
 
-You can read more in our **[Understanding the different SPP APIs](https://github.com/shareportation/governance/blob/main/technical/Understanding-SPP-APIs.md)** guide. 
+You can read more in our **[Understanding the different SPP APIs](https://github.com/shareportation/governance/blob/master/technical/Understanding-SPP-APIs.md)** guide. 
 
 ![SPP APIs and Endpoints](https://ibb.co/3dbP4zq)
 
 ## GBFS Requirement
 
-All SPP compatible Provider feeds [must also expose](/provider/README.md#gbfs) a public [GBFS](https://github.com/NABSA/gbfs) feed. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how SPP Provider `/vehicles` can be used by regulators instead of the public GBFS `/free_bike_status`. Additional information on SPP and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_SPP.md).
+All SPP compatible Provider feeds [must also expose](/provider/README.md#gbfs) a public [GBFS](https://github.com/NABSA/gbfs) feed. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how SPP Provider `/vehicles` can be used by regulators instead of the public GBFS `/free_bike_status`. Additional information on SPP and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/master/technical/GBFS_and_SPP.md).
 
 [Top][toc]
 
@@ -89,7 +89,7 @@ All SPP compatible Provider feeds [must also expose](/provider/README.md#gbfs) a
 
 To stay up to date on SPP, please **subscribe to the [SPP-announce](https://groups.google.com/a/groups.shareportation.org/g/SPP-announce) mailing list** for general updates, the **[wg-SPP](https://groups.google.com/a/groups.shareportation.org/g/wg-SPP) mailing list** for Working Group details and meetings, and read our **[Community Wiki](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki)**.
 
-The Mobility Data Specification is an open source project with all development taking place on GitHub and public meetings through our [SPP Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions), [creating an issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues), suggesting changes with [a pull request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/main/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
+The Mobility Data Specification is an open source project with all development taking place on GitHub and public meetings through our [SPP Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions), [creating an issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues), suggesting changes with [a pull request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/master/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
 
 **Read our [How to Get Involved in the SharePortation](https://www.shareportation.org/how-to-get-involved-in-the-open-mobility-foundation/) blog post for more detail and an overview of how the SPP is organized.**
 
@@ -116,19 +116,19 @@ Read about [how to become an SPP member](https://www.shareportation.org/how-to-b
 
 SPP has a **current release** (version 1.2.0), **previous releases** (both recommended and longer recommended for use), and **upcoming releases** in development. For a full list of releases, their status, recommended versions, and timelines, see the [Official SPP Releases](https://github.com/shareportation/governance/wiki/Releases) page.
 
-The SPP provides guidance on upgrading for cities, providers, and software companies, and sample permit language for cities. See our [SPP Version Guidance](https://github.com/shareportation/governance/blob/main/technical/SPP-SPP-Version-Guidance.md) for best practices on how and when to upgrade SPP as new versions become available. Our complimentary [SPP Policy Language Guidance](https://github.com/shareportation/governance/blob/main/technical/SPP-SPP-Policy-Language-Guidance.md) document is for cities writing SPP into their operating policy and includes sample policy language.
+The SPP provides guidance on upgrading for cities, providers, and software companies, and sample permit language for cities. See our [SPP Version Guidance](https://github.com/shareportation/governance/blob/master/technical/SPP-SPP-Version-Guidance.md) for best practices on how and when to upgrade SPP as new versions become available. Our complimentary [SPP Policy Language Guidance](https://github.com/shareportation/governance/blob/master/technical/SPP-SPP-Policy-Language-Guidance.md) document is for cities writing SPP into their operating policy and includes sample policy language.
 
 ## Technical Information
 
-The latest SPP release is in the [`main`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main) branch, and development for the next release occurs in the [`dev`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) branch.
+The latest SPP release is in the [`master`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/master) branch, and development for the next release occurs in the [`dev`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) branch.
 
-The SPP specification is versioned using Git tags and [semantic versioning](https://semver.org/). See prior [releases](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/releases) and the [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md) for more information and [version support](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md#ongoing-version-support).
+The SPP specification is versioned using Git tags and [semantic versioning](https://semver.org/). See prior [releases](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/releases) and the [Release Guidelines](https://github.com/shareportation/governance/blob/master/technical/ReleaseGuidelines.md) for more information and [version support](https://github.com/shareportation/governance/blob/master/technical/ReleaseGuidelines.md#ongoing-version-support).
 
-* [Latest Release Branch](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main) (main)
+* [Latest Release Branch](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/master) (master)
 * [Development Branch](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) (dev)
 * [All GitHub Releases](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/releases)
 * [SPP Releases](https://github.com/shareportation/governance/wiki/Releases) - current/recommended versions, timeline
-* [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md)
+* [Release Guidelines](https://github.com/shareportation/governance/blob/master/technical/ReleaseGuidelines.md)
 
 [Top][toc]
 
@@ -167,12 +167,12 @@ Please [let us know](https://www.shareportation.org/get-in-touch/) if you are us
 
 SPP includes information about vehicles, their location, and trips taken on those vehicles to allow agencies to regulate their use in the public right of way and to conduct transportation planning and analysis. While SPP is not designed to convey personal information about the users of shared mobility services, data collected about mobility can be sensitive. The SPP and SPP community have created a number of resources to help cities, mobility providers, and software companies handle vehicle data safely:
 
-* [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/raw/main/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf) - guide that covers essential privacy topics and best practices
+* [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/raw/master/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf) - guide that covers essential privacy topics and best practices
 * [The Privacy Principles for Mobility Data](https://www.mobilitydataprivacyprinciples.org/) - principles endorsed by the SPP and other mobility organizations to guide the mobility ecosystem in the responsible use of data and the protection of individual privacy
-* [Mobility Data State of Practice](https://github.com/shareportation/privacy-committee/blob/main/products/state-of-the-practice.md) -  real-world examples related to the handling and protection of SPP and other types of mobility data
+* [Mobility Data State of Practice](https://github.com/shareportation/privacy-committee/blob/master/products/state-of-the-practice.md) -  real-world examples related to the handling and protection of SPP and other types of mobility data
 * [Understanding the Data in SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Understanding-the-Data-in-SPP) - technical document outlining what data is (and is not) in SPP
 * [Use Case Database](https://www.shareportation.org/whats-possible-with-SPP/) - a starting point for understanding how SPP can be used, and what parts of SPP is required to meet those use cases
-* [Policy Requirements](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main/policy#requirement) - built into SPP, allowing agencies to specify only the endpoints and fields needed for program regulation
+* [Policy Requirements](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/master/policy#requirement) - built into SPP, allowing agencies to specify only the endpoints and fields needed for program regulation
 * Using SPP Under GDPR (link coming soon) - how to use SPP in the context of GDPR in Europe
 
 The SPP’s [Privacy, Security, and Transparency Committee](https://github.com/shareportation/privacy-committee#welcome-to-the-privacy-security-and-transparency-committee) creates many of these resources, and advises the SPP on principles and practices that ensure the secure handling of mobility data. The committee – which is composed of both private and public sector SPP members – also holds regular public meetings, which provide additional resources and an opportunity to discuss issues related to privacy and mobility data. Learn more [here](https://github.com/shareportation/privacy-committee#welcome-to-the-privacy-security-and-transparency-committee).
@@ -200,7 +200,7 @@ Please [let us know](https://docs.google.com/forms/d/e/1FAIpQLScrMPgeb1TKMYCjjKs
 
 Community projects are those efforts by individual contributors or informal groups that take place outside SharePortation’s formalized process, complementing SPP. These related projects often push new ideas forward through experimental or locally-focused development, and are an important part of a thriving open source community. Some of these projects may eventually be contributed to and managed by the SharePortation.
 
-The SPP's [Communitiy Projects](https://www.shareportation.org/community-projects/) page has an every growing list of projects related to SPP, and see our [Privacy Committee's State of Practice](https://github.com/shareportation/privacy-committee/blob/main/products/state-of-the-practice.md) for more examples.
+The SPP's [Communitiy Projects](https://www.shareportation.org/community-projects/) page has an every growing list of projects related to SPP, and see our [Privacy Committee's State of Practice](https://github.com/shareportation/privacy-committee/blob/master/products/state-of-the-practice.md) for more examples.
 
 Please [let us know](https://www.shareportation.org/get-in-touch/) if you create open source or private tools for implementing or working with SPP data.
 

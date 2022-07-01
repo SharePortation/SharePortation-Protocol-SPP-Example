@@ -134,7 +134,7 @@ See the closed PRs tagged with [Milestone 1.0.0](https://github.com/shareportati
   * [Add link to State of Practice](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/477)
   * [Update GBFS references and links](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/508)
   * Move [Code of Conduct](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/514), [Contributing Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/513), and [Release Guidelines](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/512) to new [Governance repo](https://github.com/shareportation/governance)
-   * [Updating 'master' to 'main' as default branch name](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/522)
+   * [Updating 'master' to 'master' as default branch name](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/522)
    * [Add Superpedestrian to providers.csv](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/535)
    * [Add Circ to providers.csv](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/553)
    * [Removed Options version negotiation](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/536#pullrequestreview-439364663)
@@ -358,4 +358,4 @@ This release includes a number of enhancements and clarifications to the [`provi
 
 * SPP is under active development. As such, pre-`1.0` versions may introduce breaking changes until things stabilize. Every effort will be made to ensure that any breaking change is well documented and that appropriate workarounds are suggested.
 
-[provider]: https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main/provider
+[provider]: https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/master/provider

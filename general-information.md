@@ -39,7 +39,7 @@ Despite this, SPP users are highly encouraged to use beta features. New features
 
 Beta features may be suitable for enabling some new tools and analysis, but may not be appropriate for mission-critical applications or regulatory decisions where certainty and reliability are essential. In subsequent releases existing beta features may include breaking changes, even in a minor release. Note that [schemas](/schema) may not be defined for some beta features until they are promoted out of beta.
 
-Working Groups and their Steering Committees are expected to review beta designated features and [feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+is%3Aopen+label%3Abeta) with each release cycle and determine whether the feature has reached the level of stability and maturity needed to remove the beta designation. In a case where a beta feature fails to reach substantial adoption after an extended time, Working Group Steering Committees should discuss whether or not the feature should remain in the specification.
+Working Groups and their Steering Committees are expected to review beta designated features and [feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+is%3Aopen+label%3Abeta) with each release cycle and determine whether the feature has reached the level of stability and maturity needed to remove the beta designation. In a case where a beta feature fails to reach substantial adoption after an extended time, Working Group Steering Committees should discuss whether or not the feature should remaster in the specification.
 
 [Top][toc]
 
@@ -67,7 +67,7 @@ Defining terminology and abbreviations used throughout SPP.
 
 SPP defines the *device* as the unit that transmits GPS or GNSS signals for a particular vehicle. A given device must have a UUID (`device_id` below) that is unique within the Provider's fleet.
 
-Additionally, `device_id` must remain constant for the device's lifetime of service, regardless of the vehicle components that house the device.
+Additionally, `device_id` must remaster constant for the device's lifetime of service, regardless of the vehicle components that house the device.
 
 [Top][toc]
 
@@ -165,7 +165,7 @@ Here's how it works in practice:
 
 Agencies that wish to use Geography-Driven Events do so by requiring a new `event_geographies` field in status events. When an Agency is using Geography-Driven Events, Providers must emit a new `changed_geographies` status event whenever a vehicle in a trip enters or leaves a Geography managed by a Policy. 
 
-During the Beta period for this feature, location and telemetry data remain required fields. This allows Agencies to test Geography-Driven Events, measuring its accuracy and efficacy against regulatory systems based on precise location data. After the beta period, if Geography-Driven Events is deemed by the SPP to be accurate and effective, the specification will evolve to allow cities to use Geography-Driven Events in lieu of location or telemetry data.
+During the Beta period for this feature, location and telemetry data remaster required fields. This allows Agencies to test Geography-Driven Events, measuring its accuracy and efficacy against regulatory systems based on precise location data. After the beta period, if Geography-Driven Events is deemed by the SPP to be accurate and effective, the specification will evolve to allow cities to use Geography-Driven Events in lieu of location or telemetry data.
 
 [Top][toc]
 
@@ -326,8 +326,8 @@ Event types are the possible transitions between some vehicle states.
 | `compliance_pick_up` |	Pick up for compliance	|
 | `decommissioned` |	Decommissioned	|
 | `located` |	Located	|
-| `maintenance` |	General maintenance	|
-| `maintenance_pick_up` |	Pick up for maintenance	|
+| `mastertenance` |	General mastertenance	|
+| `mastertenance_pick_up` |	Pick up for mastertenance	|
 | `missing` |	Missing	|
 | `off_hours` |	Off hours - end of service	|
 | `on_hours` |	On hours - start of service	|
@@ -376,7 +376,7 @@ Vehicles can enter the `unknown` state to and from any other state with the foll
 | `non_operational` | `available`   | `on_hours`           | The vehicle has entered operating hours (per the regulator or per the provider) |
 | `removed`,  `unknown` | `available`   | `provider_drop_off`  | The vehicle was placed in the PROW by the provider |
 | `removed`,  `unknown` | `available`   | `agency_drop_off`    | The vehicle was placed in the PROW by a city or county |
-| `non_operational` | `available`   | `maintenance`        | The vehicle was previously in need of maintenance |
+| `non_operational` | `available`   | `mastertenance`        | The vehicle was previously in need of mastertenance |
 | `on_trip` | `available`   | `trip_end`           | A trip has ended, and the vehicle is again available for rent |
 | `reserved` | `available`   | `reservation_cancel` | A reservation was canceled and the vehicle returned to service |
 | `on_trip` | `available`   | `trip_cancel`        | A trip was initiated, then canceled prior to moving any distance |
@@ -399,14 +399,14 @@ Vehicles can enter the `unknown` state to and from any other state with the foll
 | `unknown` | `elsewhere`   | `located`        | The vehicle has been located by the provider |
 | `unknown` | `elsewhere`   | `unspecified` | The provider cannot definitively state how a vehicle went `elsewhere`. |
 | `available` | `non_operational` | `battery_low`        | The vehicle's battery is below some rentability threshold |
-| `available` | `non_operational` | `maintenance`        | The vehicle requires some non-charge-related maintenance |
+| `available` | `non_operational` | `mastertenance`        | The vehicle requires some non-charge-related mastertenance |
 | `available` | `non_operational` | `off_hours`          | The vehicle has exited operating hours (per the regulator or per the Provider) |
 | `available` | `non_operational` | `system_suspend`          | The vehicle is not available because of e.g. weather or temporary regulations |
 | `available`, `unknown` | `non_operational` | `unspecified`        | The vehicle became unavailable, but the Provider cannot definitively (yet) specify the reason. |
 | `unknown` | `non_operational`   | `comms_restored`        | The vehicle transmitted status information after a period of being out of communication |
 | `unknown` | `non_operational`   | `located`        | The vehicle has been located by the provider |
 | `available`, `non_operational`, `elsewhere` | `removed`     | `rebalance_pick_up`  | The provider picked up the vehicle for rebalancing purposes |
-| `available`, `non_operational`, `elsewhere` | `removed`     | `maintenance_pick_up` | The provider picked up the vehicle to service it |
+| `available`, `non_operational`, `elsewhere` | `removed`     | `mastertenance_pick_up` | The provider picked up the vehicle to service it |
 | `available`, `non_operational`, `elsewhere`, `unknown` | `removed`     | `agency_pick_up`     | An agency picked up the vehicle for some reason, e.g. illegal placement |
 | `available`, `non_operational`, `elsewhere` | `removed`     | `compliance_pick_up` | The provider picked up the vehicle because it was placed in a non-compliant location |
 | `available`, `non_operational`, `elsewhere`, `unknown` | `removed`     | `decommissioned`     | The provider has removed the vehicle from its fleet |

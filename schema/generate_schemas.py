@@ -13,7 +13,7 @@ import policy
 import provider
 
 
-if __name__ == "__main__":
+if __name__ == "__master__":
     if len(sys.argv) == 1:
         agency.write_schema_files()
         geography.write_schema_files()

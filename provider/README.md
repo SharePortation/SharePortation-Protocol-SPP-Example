@@ -294,7 +294,7 @@ Unless stated otherwise by the municipality, this endpoint must return only thos
 | `event_geographies` | UUID[] | Optional | **[Beta feature](/general-information.md#beta-features):** *Yes (as of 1.1.0)*. Array of Geography UUIDs consisting of every Geography that contains the location of the status change. See [Geography Driven Events][geography-driven-events]. Required if `event_location` is not present. |
 | `battery_pct` | Float | Required if Applicable | Percent battery charge of device, expressed between 0 and 1 |
 | `trip_id` | UUID | Required if Applicable | Trip UUID (foreign key to Trips API), required if `event_types` contains `trip_start`, `trip_end`, `trip_cancel`, `trip_enter_jurisdiction`, or `trip_leave_jurisdiction` |
-| `associated_ticket` | String | Optional | Identifier for an associated ticket inside an Agency-maintained 311 or CRM system |
+| `associated_ticket` | String | Optional | Identifier for an associated ticket inside an Agency-mastertained 311 or CRM system |
 
 [Top][toc]
 
@@ -451,7 +451,7 @@ Some combinations of parameters may return a small count of trips, which could i
 
 As Reports is in [beta][beta], this value may be adjusted in future releases and/or may become dynamic to account for specific categories of use cases and users. To improve the specification and to inform future guidance, beta users are encouraged to share their feedback and questions about k-values on this [discussion thread](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions/622).
 
-Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/blob/main/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf). 
+Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/blob/master/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf). 
 
 [Top][toc]
 
@@ -461,7 +461,7 @@ Using k-anonymity will reduce, but not necessarily eliminate the risk that an in
 
 All SPP compatible `provider` APIs must expose a public [GBFS](https://github.com/NABSA/gbfs) feed as well. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility.
 
-GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on SPP and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_SPP.md).
+GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on SPP and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/master/technical/GBFS_and_SPP.md).
 
 [Top][toc]
 

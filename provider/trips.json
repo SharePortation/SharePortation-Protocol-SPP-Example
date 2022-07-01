@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/provider/trips.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/provider/trips.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "Schema for SPP Provider trips payloads",
   "type": "object",

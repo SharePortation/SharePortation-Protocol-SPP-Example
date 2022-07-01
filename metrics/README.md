@@ -106,7 +106,7 @@ The SPP suggests a k-value of 10 is an appropriate starting point for safe anony
 
 The k-value being used is always returned in the Metrics Query API [response](/metrics#response-1) to provide important context for the data consumer on the data redaction that is occurring.
 
-Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/blob/main/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf). 
+Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/blob/master/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf). 
 
 [Top][toc]
 

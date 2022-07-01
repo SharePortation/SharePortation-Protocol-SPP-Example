@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/policy/policy.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/policy/policy.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "The SPP Policy Schema",
   "type": "object",
@@ -441,8 +441,8 @@
         "compliance_pick_up",
         "decommissioned",
         "located",
-        "maintenance",
-        "maintenance_pick_up",
+        "mastertenance",
+        "mastertenance_pick_up",
         "missing",
         "off_hours",
         "on_hours",

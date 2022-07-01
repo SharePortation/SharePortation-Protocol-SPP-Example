@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/get_vehicle.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/master/agency/get_vehicle.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "The SPP Agency Schema, GET vehicle payload",
   "type": "object",

@@ -11,7 +11,7 @@ assignees: ''
 
 Opening this issue will allow you as a mobility service provider get an official provider ID for use across SPP globally.
 
-**Fields needed from you for the [providers.csv file](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/main/providers.csv).**
+**Fields needed from you for the [providers.csv file](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/master/providers.csv).**
 
 _All fields are required._
 
