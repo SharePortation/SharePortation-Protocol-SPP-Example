@@ -1,11 +1,11 @@
 ---
 name: Default
-about: Suggest changes to MDS
+about: Suggest changes to SPP
 title: <Insert Title>
 
 ---
 
-# MDS Pull Request
+# SPP Pull Request
 
 Thank you for your contribution!  Please review our SPP [contributing page](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md) to understand guidelines and policies for participation, and our [Code of Conduct page](https://github.com/shareportation/governance/blob/main/CODE_OF_CONDUCT.md).
 

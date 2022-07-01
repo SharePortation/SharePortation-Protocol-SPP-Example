@@ -1,13 +1,13 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/post_stops.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Agency Schema, register Stops",
+  "title": "The SPP Agency Schema, register Stops",
   "type": "object",
   "definitions": {
     "stop": {
       "$id": "#/definitions/stop",
       "type": "object",
-      "description": "The common schema elements for a Stop in MDS",
+      "description": "The common schema elements for a Stop in SPP",
       "required": [
         "stop_id",
         "name",
@@ -36,7 +36,7 @@
         },
         "location": {
           "$id": "#/definitions/stop/properties/location",
-          "$ref": "#/definitions/MDS_Feature_Point",
+          "$ref": "#/definitions/SPP_Feature_Point",
           "description": "Location of the stop"
         },
         "status": {
@@ -119,7 +119,7 @@
     "stop_status": {
       "$id": "#/definitions/stop_status",
       "type": "object",
-      "description": "Status object for a Stop in MDS",
+      "description": "Status object for a Stop in SPP",
       "required": [
         "is_installed",
         "is_renting",
@@ -214,9 +214,9 @@
       },
       "additionalProperties": false
     },
-    "MDS_Feature_Point": {
-      "$id": "#/definitions/MDS_Feature_Point",
-      "title": "MDS GeoJSON Feature Point",
+    "SPP_Feature_Point": {
+      "$id": "#/definitions/SPP_Feature_Point",
+      "title": "SPP GeoJSON Feature Point",
       "type": "object",
       "required": [
         "type",

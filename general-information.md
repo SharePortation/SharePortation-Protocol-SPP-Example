@@ -1,6 +1,6 @@
 # Mobility Data Specification: **General information**
 
-This document contains specifications that are shared between the various MDS APIs such as [`agency`][agency], [`policy`][policy], [`provider`][provider], etc.
+This document contains specifications that are shared between the various SPP APIs such as [`agency`][agency], [`policy`][policy], [`provider`][provider], etc.
 
 ## Table of Contents
 
@@ -33,9 +33,9 @@ This document contains specifications that are shared between the various MDS AP
 
 ## Beta Features
 
-In some cases, features within MDS may be marked as "beta." These are typically recently added endpoints or fields. Because beta features are new, they may not yet be fully mature and proven in real-world operation. The design of beta features may have undiscovered gaps, ambiguities, or inconsistencies. Implementations of those features are typically also quite new and are more likely to contain bugs or other flaws. Beta features are likely to evolve more rapidly than other parts of the specification.
+In some cases, features within SPP may be marked as "beta." These are typically recently added endpoints or fields. Because beta features are new, they may not yet be fully mature and proven in real-world operation. The design of beta features may have undiscovered gaps, ambiguities, or inconsistencies. Implementations of those features are typically also quite new and are more likely to contain bugs or other flaws. Beta features are likely to evolve more rapidly than other parts of the specification.
 
-Despite this, MDS users are highly encouraged to use beta features. New features can only become proven and trusted through implementation, use, and the learning that comes with it. Users should be thoughtful about the role of beta features in their operations. Users of beta features are strongly encouraged to share their experiences, learnings, and challenges with the broader MDS community via GitHub issues or pull requests. This will inform the refinements that transform beta features into fully proven, stable parts of the specification. You may leave feedback on the appropriate open [feedback issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+is%3Aopen+label%3Abeta) tagged with the `beta` label.
+Despite this, SPP users are highly encouraged to use beta features. New features can only become proven and trusted through implementation, use, and the learning that comes with it. Users should be thoughtful about the role of beta features in their operations. Users of beta features are strongly encouraged to share their experiences, learnings, and challenges with the broader SPP community via GitHub issues or pull requests. This will inform the refinements that transform beta features into fully proven, stable parts of the specification. You may leave feedback on the appropriate open [feedback issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+is%3Aopen+label%3Abeta) tagged with the `beta` label.
 
 Beta features may be suitable for enabling some new tools and analysis, but may not be appropriate for mission-critical applications or regulatory decisions where certainty and reliability are essential. In subsequent releases existing beta features may include breaking changes, even in a minor release. Note that [schemas](/schema) may not be defined for some beta features until they are promoted out of beta.
 
@@ -53,19 +53,19 @@ If the currency field is null, USD cents is implied.
 
 ## Definitions
 
-Defining terminology and abbreviations used throughout MDS.
+Defining terminology and abbreviations used throughout SPP.
 
 * **API** - Application Programming Interface - A function or set of functions that allow one software application to access or communicate with features of a different software application or service.
 * **API Endpoint** - A point at which an API connects with a software application or service.
 * **DOT** - Department of Transportation, usually a city-run agency.
-* **Jurisdiction** - An agency’s area of legal authority to manage and regulate a mobility program in the real world. Note there is also an MDS API called [Jurisdiction](/jurisdiction), which is a way to digitally represent this.
+* **Jurisdiction** - An agency’s area of legal authority to manage and regulate a mobility program in the real world. Note there is also an SPP API called [Jurisdiction](/jurisdiction), which is a way to digitally represent this.
 * **PROW** - Public Right of Way - the physical infrastructure reserved for transportation purposes, examples include sidewalks, curbs, bike lanes, transit lanes and stations, traffic lanes and signals, and public parking.
 
 [Top][toc]
 
 ## Devices
 
-MDS defines the *device* as the unit that transmits GPS or GNSS signals for a particular vehicle. A given device must have a UUID (`device_id` below) that is unique within the Provider's fleet.
+SPP defines the *device* as the unit that transmits GPS or GNSS signals for a particular vehicle. A given device must have a UUID (`device_id` below) that is unique within the Provider's fleet.
 
 Additionally, `device_id` must remain constant for the device's lifetime of service, regardless of the vehicle components that house the device.
 
@@ -145,7 +145,7 @@ For the purposes of this specification, the intersection of two geographic datat
 
 **[Beta feature](/general-information.md#beta-features):** *Yes (as of 1.1.0)*. [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/670)  
 
-Geography-Driven Events (GDE) is a new MDS feature for Agencies to perform complete Policy compliance monitoring without precise location data. Geography-Driven Events describe individual vehicles in realtime – not just aggregate data. However, rather than receiving the exact location of a vehicle, Agencies receive information about the vehicle's current geographic region. The regions used for Geography-Driven Events correspond to the Geographies in an Agency's current Policy. In this way, the data-shared using Geography-Driven Events is matched to an Agency's particular regulatory needs. 
+Geography-Driven Events (GDE) is a new SPP feature for Agencies to perform complete Policy compliance monitoring without precise location data. Geography-Driven Events describe individual vehicles in realtime – not just aggregate data. However, rather than receiving the exact location of a vehicle, Agencies receive information about the vehicle's current geographic region. The regions used for Geography-Driven Events correspond to the Geographies in an Agency's current Policy. In this way, the data-shared using Geography-Driven Events is matched to an Agency's particular regulatory needs. 
 
 See [this example](/policy/examples/requirements.md#geography-driven-events) for how to implement GDE using [Policy Requirements](/policy#requirement).
 
@@ -238,7 +238,7 @@ Stops describe vehicle trip start and end locations in a pre-designated physical
 | capacity               | {vehicle_type: number}                                | Required | Number of total places per vehicle_type |
 | num_vehicles_available | {vehicle_type: number}                                | Required | How many vehicles are available per vehicle_type at this stop? |
 | num_vehicles_disabled  | {vehicle_type: number}                                | Required | How many vehicles are unavailable/reserved per vehicle_type at this stop? |
-| provider_id            | UUID                                                  | Optional | UUID for the Provider managing this stop. Null/undefined if managed by an Agency.  See MDS [provider list](/providers.csv). |
+| provider_id            | UUID                                                  | Optional | UUID for the Provider managing this stop. Null/undefined if managed by an Agency.  See SPP [provider list](/providers.csv). |
 | geography_id           | UUID                                                  | Optional | Pointer to the [Geography](/geography) that represents the Stop geospatially via Polygon or MultiPolygon. |
 | region_id              | string                                                | Optional | ID of the region where station is located, see [GBFS Station Information][gbfs-station-info] |
 | short_name             | String                                                | Optional | Abbreviated stop name |
@@ -275,7 +275,7 @@ Example of the **Stop Status** object with properties listed:
 
 ### GBFS Compatibility
 
-Some of the fields in the `Stops` definition are using notions which are currently not in MDS, such as `rental_methods`. These fields are included for compatibility with GBFS.
+Some of the fields in the `Stops` definition are using notions which are currently not in SPP, such as `rental_methods`. These fields are included for compatibility with GBFS.
 
 [Top][toc]
 
@@ -289,7 +289,7 @@ A `timestamp` refers to integer milliseconds since Unix epoch.
 
 Object identifiers are described via Universally Unique Identifiers [(UUIDs)](https://en.wikipedia.org/wiki/Universally_unique_identifier). For example, the `device_id` field used to uniquely identify a vehicle is a UUID.
 
-MDS uses Version 1 UUIDs by default. Version 4 UUIDs may be used where noted.
+SPP uses Version 1 UUIDs by default. Version 4 UUIDs may be used where noted.
 
 [Top][toc]
 
@@ -348,7 +348,7 @@ Event types are the possible transitions between some vehicle states.
 
 ### Limitations on the Use of Certain Values
 
-MDS is intended to communicate the provider's best available information to regulators. However there may be legitimate circumstances where providers do not have definitive or current information about devices on the ground. MDS incorporates some values to convey these situations.  These vehicle state and event type values are to be used sparingly and temporarily, and are not meant for repeated or prolonged use. These values exist to create logical coherence within MDS about vehicles that are operating abnormally or are out of communication. When a more accurate value is known, the MDS API should be updated with the latest information. Cities may add language to their Service Level Agreements (SLAs) that minimize the use of these values by providers. 
+SPP is intended to communicate the provider's best available information to regulators. However there may be legitimate circumstances where providers do not have definitive or current information about devices on the ground. SPP incorporates some values to convey these situations.  These vehicle state and event type values are to be used sparingly and temporarily, and are not meant for repeated or prolonged use. These values exist to create logical coherence within SPP about vehicles that are operating abnormally or are out of communication. When a more accurate value is known, the SPP API should be updated with the latest information. Cities may add language to their Service Level Agreements (SLAs) that minimize the use of these values by providers. 
 
 **Vehicle State: Unknown**
 
@@ -356,7 +356,7 @@ The `unknown` vehicle state means that the vehicle cannot be reliably placed int
 
 **Event Type: Unspecified**
 
-The `unspecified` event type state transition means that the vehicle has moved from one state to another for an unspecified or unknown reason. It is used when there are multiple possible event types between states, but the reason for the transition is not clear. It is expected that `unspecified` will not be used frequently, and only for short periods of time. Cities may put in place specific limitations via an SLA. When more accurate information becomes available to the provider, it should be updated in the MDS data by sending a new event type state transition with the current timestamp.
+The `unspecified` event type state transition means that the vehicle has moved from one state to another for an unspecified or unknown reason. It is used when there are multiple possible event types between states, but the reason for the transition is not clear. It is expected that `unspecified` will not be used frequently, and only for short periods of time. Cities may put in place specific limitations via an SLA. When more accurate information becomes available to the provider, it should be updated in the SPP data by sending a new event type state transition with the current timestamp.
 
 [Top][toc]
 
@@ -420,13 +420,13 @@ Vehicles can enter the `unknown` state to and from any other state with the foll
 ### State Machine Diagram
 
 The *State Machine Diagram* shows how `vehicle_state` and `event_type` relate to each other and how vehicles can transition between states. See [Google Slides](https://docs.google.com/presentation/d/1Ar2-ju8YlddSsTATvQw4YjsSa5108XtidtnJNk-UAfA/edit) for the source file.
-![MDS State Machine Diagram](/MDS-state-machine-diagram.svg)
+![SPP State Machine Diagram](/SPP-state-machine-diagram.svg)
 
 [Top][toc]
 
 ## Vehicle Types
 
-The list of allowed `vehicle_type` values in MDS. Aligning with [GBFS vehicle types form factors](https://github.com/NABSA/gbfs/blob/master/gbfs.md#vehicle_typesjson-added-in-v21-rc).
+The list of allowed `vehicle_type` values in SPP. Aligning with [GBFS vehicle types form factors](https://github.com/NABSA/gbfs/blob/master/gbfs.md#vehicle_typesjson-added-in-v21-rc).
 
 | `vehicle_type` | Description |
 |----------------| ----------- |
@@ -441,16 +441,16 @@ The list of allowed `vehicle_type` values in MDS. Aligning with [GBFS vehicle ty
 
 ## Versioning
 
-MDS APIs must handle requests for specific versions of the specification from clients.
+SPP APIs must handle requests for specific versions of the specification from clients.
 
-Versioning must be implemented through the use of a custom media-type, `application/vnd.mds+json`, combined with a required `version` parameter.
+Versioning must be implemented through the use of a custom media-type, `application/vnd.SPP+json`, combined with a required `version` parameter.
 
-The version parameter specifies the dot-separated combination of major and minor versions from a published version of the specification. For example, the media-type for version `1.0.1` would be specified as `application/vnd.mds+json;version=1.0`
+The version parameter specifies the dot-separated combination of major and minor versions from a published version of the specification. For example, the media-type for version `1.0.1` would be specified as `application/vnd.SPP+json;version=1.0`
 
 Clients must specify the version they are targeting through the `Accept` header. For example:
 
 ```http
-Accept: application/vnd.mds+json;version=1.2.0
+Accept: application/vnd.SPP+json;version=1.2.0
 ```
 
 Since versioning was not available from the start, the following APIs provide a fallback version if the `Accept` header is not set as specified above:

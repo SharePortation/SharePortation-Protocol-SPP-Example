@@ -44,7 +44,7 @@
         "route": {
           "$id": "#/properties/data/properties/trips/items/properties/route",
           "title": "The Route Schema",
-          "$ref": "#/definitions/MDS_FeatureCollection_Route"
+          "$ref": "#/definitions/SPP_FeatureCollection_Route"
         },
         "accuracy": {
           "$id": "#/properties/data/properties/trips/items/properties/accuracy",

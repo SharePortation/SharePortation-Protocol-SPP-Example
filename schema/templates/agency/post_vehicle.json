@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/post_vehicle.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Agency Schema, register vehicle body",
+  "title": "The SPP Agency Schema, register vehicle body",
   "type": "object",
   "definitions": {},
   "required": [],

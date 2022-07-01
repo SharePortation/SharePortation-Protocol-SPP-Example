@@ -11,7 +11,7 @@ import requests
 COMMON_DEFINITIONS = {}
 
 
-MDS_FEATURE_POINT = "MDS_Feature_Point"
+SPP_FEATURE_POINT = "SPP_Feature_Point"
 
 
 def load_json(path):
@@ -131,17 +131,17 @@ def point_definition():
     }
 
 
-def mds_feature_point_definition(definitions):
+def SPP_feature_point_definition(definitions):
     """
-    Create a customized definition of the GeoJSON Feature schema for MDS Points.
+    Create a customized definition of the GeoJSON Feature schema for SPP Points.
     """
     # Get the canonical Feature schema
     feature = requests.get("http://geojson.org/schema/Feature.json").json()
 
     # Modify metadata
     feature.pop("$schema")
-    feature["$id"] = definition_id(MDS_FEATURE_POINT)
-    feature["title"] = "MDS GeoJSON Feature Point"
+    feature["$id"] = definition_id(SPP_FEATURE_POINT)
+    feature["title"] = "SPP GeoJSON Feature Point"
 
     # Only allow GeoJSON Point feature geometry
     feature["properties"]["geometry"] = { "$ref": definition_id("Point") }
@@ -168,7 +168,7 @@ def mds_feature_point_definition(definitions):
     telemetry = definitions["telemetry"]
     f_properties["properties"].update(telemetry["properties"])
 
-    return {MDS_FEATURE_POINT: feature}
+    return {SPP_FEATURE_POINT: feature}
 
 
 def stop_definitions():
@@ -183,7 +183,7 @@ def stop_definitions():
         "uuid",
         "uuid_array",
         "vehicle_type_counts",
-        MDS_FEATURE_POINT
+        SPP_FEATURE_POINT
     )
 
     return definitions
@@ -219,9 +219,9 @@ def load_definitions(*args, allow_null=False):
         common = load_json("./templates/common.json")
         common_definitions = common["definitions"]
 
-        # MDS specific geography definition
-        mds_feature = mds_feature_point_definition(common_definitions)
-        common_definitions.update(mds_feature)
+        # SPP specific geography definition
+        SPP_feature = SPP_feature_point_definition(common_definitions)
+        common_definitions.update(SPP_feature)
 
         # vehicle_type -> count definition
         veh_type_counts = vehicle_type_counts_definition(common_definitions)

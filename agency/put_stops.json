@@ -1,13 +1,13 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/put_stops.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Agency Schema, update Stops",
+  "title": "The SPP Agency Schema, update Stops",
   "type": "object",
   "definitions": {
     "stop_status": {
       "$id": "#/definitions/stop_status",
       "type": "object",
-      "description": "Status object for a Stop in MDS",
+      "description": "Status object for a Stop in SPP",
       "required": [
         "is_installed",
         "is_renting",

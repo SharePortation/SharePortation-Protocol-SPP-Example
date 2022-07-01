@@ -20,7 +20,7 @@ All of the examples below will be presented within the single [/geographies](/ge
 
 **GeoJSON sample to view all geometries together in a preview**: [`geographies.geojson`](geographies.geojson)
 
-_Note GeoJSON example files are just for your reference and to generate a preview on Github. The GeoJSON files alone are not part of MDS._
+_Note GeoJSON example files are just for your reference and to generate a preview on Github. The GeoJSON files alone are not part of SPP._
 
 ## Municipal Boundary
 

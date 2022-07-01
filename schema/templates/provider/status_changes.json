@@ -27,7 +27,7 @@
         },
         "event_location": {
           "$id": "#/properties/data/properties/status_changes/items/properties/event_location",
-          "$ref": "#/definitions/MDS_Feature_Point",
+          "$ref": "#/definitions/SPP_Feature_Point",
           "description": "The GPS or GNSS coordinates of where the event occurred"
         },
         "vehicle_state": {

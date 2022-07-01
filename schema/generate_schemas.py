@@ -1,5 +1,5 @@
 """
-Generate the JSON Schema documents for MDS endpoints.
+Generate the JSON Schema documents for SPP endpoints.
 
 USAGE:
     python generate_schemas.py [--agency] [--geography] [--policy] [--provider]

@@ -1,8 +1,8 @@
-## MDS Dockless Metrics
+## SPP Dockless Metrics
 
-MDS dockless metrics are a set of defined metrics and compound metrics useful for measuring dockless vehicle activity with MDS data. Dockless metrics measure vehicle activity when they are in the public right of way, which means vehicles were in either available, unavailable, reserved, or trip state.
+SPP dockless metrics are a set of defined metrics and compound metrics useful for measuring dockless vehicle activity with SPP data. Dockless metrics measure vehicle activity when they are in the public right of way, which means vehicles were in either available, unavailable, reserved, or trip state.
 
-The table below represents supported MDS dockless metrics extension and definition. All metrics are aggregated by time interval and geographic areas. This [document](metrics_methodology.md) provides methodologies and sample calculations of MDS metrics. 
+The table below represents supported SPP dockless metrics extension and definition. All metrics are aggregated by time interval and geographic areas. This [document](metrics_methodology.md) provides methodologies and sample calculations of SPP metrics. 
 
 | No   | Metric                                     | Description                                                                                                     |
 | ---- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |

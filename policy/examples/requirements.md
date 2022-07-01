@@ -15,12 +15,12 @@ This file presents a series of example [Requirements](../README.md#requirement) 
 
 ## Policy and Geography
 
-Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/incentives and operating/equity/no-ride/slow speed/parking areas to all providers, and require GBFS's geofencing_zones.  
+Version 1.2.0 of SPP Policy and Geography for agencies to publish rules/fees/incentives and operating/equity/no-ride/slow speed/parking areas to all providers, and require GBFS's geofencing_zones.  
 
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "4",
     "last_updated": "1611729218",
     "max_update_interval": "P1M",
@@ -30,13 +30,13 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Micromobility Program Policy Rules",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251",
@@ -48,7 +48,7 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
       "end_date": null,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "available_apis": [
             {
@@ -56,7 +56,7 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
               "available_endpoints": [
                 {
                   "endpoint_name": "policies",
-                  "url": "https://mds.cityname.com/policy/policies/1.2.0"
+                  "url": "https://SPP.cityname.com/policy/policies/1.2.0"
                 }
               ]
             },
@@ -65,7 +65,7 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
               "available_endpoints": [
                 {
                   "endpoint_name": "geographies",
-                  "url": "https://mds.cityname.com/geography/geographies/1.2.0",
+                  "url": "https://SPP.cityname.com/geography/geographies/1.2.0",
                   "available_fields": [
                     "geography_type",
                     "description"
@@ -101,12 +101,12 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
 
 ## Vehicles Only
 
-Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for bicycles, requiring only the Provider `/vehicles` endpoint and no optional fields, as an authenticated [alternative to GBFS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for internal use, while still requiring GBFS 2.1 for the public.
+Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for bicycles, requiring only the Provider `/vehicles` endpoint and no optional fields, as an authenticated [alternative to GBFS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for internal use, while still requiring GBFS 2.1 for the public.
 
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "2",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -116,13 +116,13 @@ Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Scooter Monitoring Program 2021",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be"
       ],
@@ -133,7 +133,7 @@ Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for
       "end_date": null,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -155,7 +155,7 @@ Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for
     {
       "description": "City Bikeshare Monitoring Program 2021",
       "program_website_url": "https://www.cityname.gov/transportation/bikeshare.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "2411d395-04f2-47c9-ab66-d09e9e3c3251"
       ],
@@ -166,7 +166,7 @@ Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for
       "end_date": null,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -193,12 +193,12 @@ Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for
 
 ## Trips Only
 
-Version 1.1.0 for 2 providers requiring only historic Provider `/trips` with the optional `parking_verificaiton_url` field, linked to a specific MDS Policy.  
+Version 1.1.0 for 2 providers requiring only historic Provider `/trips` with the optional `parking_verificaiton_url` field, linked to a specific SPP Policy.  
 
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "3",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -208,13 +208,13 @@ Version 1.1.0 for 2 providers requiring only historic Provider `/trips` with the
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Vehicle Program Pilot 2021",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251"
@@ -223,7 +223,7 @@ Version 1.1.0 for 2 providers requiring only historic Provider `/trips` with the
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -258,7 +258,7 @@ Version 1.1.0 for 2 providers asking for only historic [Provider `/trips`](/prov
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "3",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -268,13 +268,13 @@ Version 1.1.0 for 2 providers asking for only historic [Provider `/trips`](/prov
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Vehicle Program Pilot Research for 2021",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251"
@@ -283,7 +283,7 @@ Version 1.1.0 for 2 providers asking for only historic [Provider `/trips`](/prov
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -325,7 +325,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "3",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -335,13 +335,13 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Shared Device Program and Policies 2021",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251",
@@ -351,7 +351,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -406,7 +406,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
               "available_endpoints": [
                 {
                   "endpoint_name": "policies",
-                  "url": "https://mds.cityname.gov/policy/policies/1.1.0"
+                  "url": "https://SPP.cityname.gov/policy/policies/1.1.0"
                 }
               ]
             },
@@ -415,7 +415,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
               "available_endpoints": [
                 {
                   "endpoint_name": "geographies",
-                  "url": "https://mds.cityname.gov/geography/geographies/1.1.0"
+                  "url": "https://SPP.cityname.gov/geography/geographies/1.1.0"
                 }
               ]
             },
@@ -424,7 +424,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
               "available_endpoints": [
                 {
                   "endpoint_name": "trips",
-                  "url": "https://mds.cityname.gov/jurisdiction/jurisdictions/1.1.0"
+                  "url": "https://SPP.cityname.gov/jurisdiction/jurisdictions/1.1.0"
                 }
               ]
             },
@@ -442,7 +442,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
     {
       "description": "City Docked Device Program 2021",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "version": "0.4.1",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
@@ -453,7 +453,7 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "0.4.1",
           "required_apis": [
             {
@@ -503,12 +503,12 @@ Note: by specifying geography, policy, and jurisdiction here with a URL, the age
 
 ## Agency
 
-Version 1.1.0 for 3 providers and serving Agency only linking to a defined MDS Policy. 
+Version 1.1.0 for 3 providers and serving Agency only linking to a defined SPP Policy. 
 
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "2",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -518,13 +518,13 @@ Version 1.1.0 for 3 providers and serving Agency only linking to a defined MDS P
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Shared Device Management Program 2021-2022",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251",
@@ -534,7 +534,7 @@ Version 1.1.0 for 3 providers and serving Agency only linking to a defined MDS P
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -594,7 +594,7 @@ Version 1.1.0 for 2 providers requiring Provider `/status_changes` with the mini
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "1",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -604,13 +604,13 @@ Version 1.1.0 for 2 providers requiring Provider `/status_changes` with the mini
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {
       "description": "City Shared Vehicle Program",
       "program_website_url": "https://www.cityname.gov/transportation/shared-devices.html",
-      "program_document_url": "https://www.cityname.gov/mds_data_policy.pdf",
+      "program_document_url": "https://www.cityname.gov/SPP_data_policy.pdf",
       "provider_ids": [
         "70aa475d-1fcd-4504-b69c-2eeb2107f7be",
         "2411d395-04f2-47c9-ab66-d09e9e3c3251"
@@ -619,7 +619,7 @@ Version 1.1.0 for 2 providers requiring Provider `/status_changes` with the mini
       "end_date": 1611970539,
       "required_data_specs": [
         {
-          "data_spec_name": "MDS",
+          "data_spec_name": "SPP",
           "version": "1.2.0",
           "required_apis": [
             {
@@ -649,12 +649,12 @@ Version 1.1.0 for 2 providers requiring Provider `/status_changes` with the mini
 
 ## GBFS Only
 
-Since Requirements allows the GBFS versions and optional endpoints and fields to be defined, an agency could use it to only require public GBFS feeds, and not require MDS at all.
+Since Requirements allows the GBFS versions and optional endpoints and fields to be defined, an agency could use it to only require public GBFS feeds, and not require SPP at all.
 
 ```json
 {
   "metadata": {
-    "mds_release": "1.2.0",
+    "SPP_release": "1.2.0",
     "file_version": "2",
     "last_updated": "1611958740",
     "max_update_interval": "P1M",
@@ -664,7 +664,7 @@ Since Requirements allows the GBFS versions and optional endpoints and fields to
     "agency_language": "en-US",
     "agency_currency": "USD",
     "agency_website_url": "https://www.cityname.gov/transportation/",
-    "url": "https://mds.cityname.gov/policy/requirements/1.2.0"
+    "url": "https://SPP.cityname.gov/policy/requirements/1.2.0"
   },
   "programs": [
     {

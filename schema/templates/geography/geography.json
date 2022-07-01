@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/geography/geography.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Geography Schema",
+  "title": "The SPP Geography Schema",
   "type": "object",
   "definitions": {
     "geography": {
@@ -79,7 +79,7 @@
     "version": {
       "$id": "#/properties/version",
       "$ref": "#/definitions/version",
-      "description": "The version of MDS that the geography represents"
+      "description": "The version of SPP that the geography represents"
     }
   },
   "additionalProperties": false

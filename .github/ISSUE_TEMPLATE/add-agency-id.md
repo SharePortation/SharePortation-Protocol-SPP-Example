@@ -1,15 +1,15 @@
 ---
 name: Add Agency ID
-about: Create Agency ID for use in MDS
+about: Create Agency ID for use in SPP
 title: 'Add Agency ID: [Agency Name]'
 labels: admin
 assignees: ''
 
 ---
 
-**Note:** See the [Adding an MDS Agency ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID) page for more help.
+**Note:** See the [Adding an SPP Agency ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID) page for more help.
 
-Opening this issue will allow you as a city or governmental agency get an official agency ID for use across MDS globally, and include in your Requirements URL.
+Opening this issue will allow you as a city or governmental agency get an official agency ID for use across SPP globally, and include in your Requirements URL.
 
 **Fields needed from you for the [agencies.csv file](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/main/agencies.csv).**
 

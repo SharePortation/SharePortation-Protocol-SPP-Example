@@ -1,6 +1,6 @@
 # Mobility Data Specification: **Provider**
 
-<a href="/provider/"><img src="https://i.imgur.com/yzXrKpo.png" width="120" align="right" alt="MDS Provider Icon" border="0"></a>
+<a href="/provider/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Provider Icon" border="0"></a>
 
 The Provider API endpoints are intended to be implemented by mobility providers and consumed by regulatory agencies. When a municipality queries information from a mobility provider, the Provider API has a historical view of operations in a standard format.
 
@@ -37,7 +37,7 @@ This specification contains a data standard for *mobility as a service* provider
 
 The following information applies to all `provider` API endpoints. Details on providing authorization to endpoints is specified in the [auth](auth.md) document.
 
-This specification uses data types including timestamps, UUIDs, and vehicle state definitions as described in the MDS [General Information][general-information] document.
+This specification uses data types including timestamps, UUIDs, and vehicle state definitions as described in the SPP [General Information][general-information] document.
 
 [Top][toc]
 
@@ -53,11 +53,11 @@ Versioning must be implemented as specified in the [Versioning section][versioni
 
 The response to a client request must include a valid HTTP status code defined in the [IANA HTTP Status Code Registry][iana].
 
-See [Responses][responses] for information on valid MDS response codes and [Error Messages][error-messages] for information on formatting error messages.
+See [Responses][responses] for information on valid SPP response codes and [Error Messages][error-messages] for information on formatting error messages.
 
 The response must set the `Content-Type` header as specified in the [Versioning section][versioning].
 
-Response bodies must be a `UTF-8` encoded JSON object and must minimally include the MDS `version` and a `data` payload:
+Response bodies must be a `UTF-8` encoded JSON object and must minimally include the SPP `version` and a `data` payload:
 
 ```json
 {
@@ -77,7 +77,7 @@ All response fields must use `lower_case_with_underscores`.
 
 ### JSON Schema
 
-MDS defines [JSON Schema][json-schema] files for each endpoint.
+SPP defines [JSON Schema][json-schema] files for each endpoint.
 
 `provider` API responses must validate against their respective schema files. The schema files always take precedence over the language and examples in this and other supporting documentation meant for *human* consumption.
 
@@ -120,7 +120,7 @@ At a minimum, paginated payloads must include a `next` key, which must be set to
 
 ### Municipality Boundary
 
-Municipalities requiring MDS Provider API compliance should provide an unambiguous digital source for the municipality boundary. This boundary must be used when determining which data each `provider` API endpoint will include.
+Municipalities requiring SPP Provider API compliance should provide an unambiguous digital source for the municipality boundary. This boundary must be used when determining which data each `provider` API endpoint will include.
 
 The boundary should be defined as a polygon or collection of polygons. The file defining the boundary should be provided in Shapefile or GeoJSON format and hosted online at a published address that all providers and `provider` API consumers can access and download. The boundary description can be sent as a reference to an GeoJSON object or flat-file, if the agency is using [Geography](/geography).
 
@@ -136,7 +136,7 @@ Because of the unreliability of device clocks, the Provider is unlikely to know 
 
 ### Other Data Types
 
-For Timestamps, Vehicle Types, Propulsion Types, UUIDs, Costs, and Currencies, refer to the MDS [General Information][general-information] document.
+For Timestamps, Vehicle Types, Propulsion Types, UUIDs, Costs, and Currencies, refer to the SPP [General Information][general-information] document.
 
 [Top][toc]
 
@@ -156,7 +156,7 @@ Unless stated otherwise by the municipality, the trips endpoint must return all 
 
 | Field | Type    | Required/Optional | Comments |
 | ----- | -------- | ----------------- | ----- |
-| `provider_id` | UUID | Required | A UUID for the Provider, unique within MDS. See MDS [provider list](/providers.csv). |
+| `provider_id` | UUID | Required | A UUID for the Provider, unique within SPP. See SPP [provider list](/providers.csv). |
 | `provider_name` | String | Required | The public-facing name of the Provider |
 | `device_id` | UUID | Required | A unique device ID in UUID format |
 | `vehicle_id` | String | Required | The Vehicle Identification Number visible on the vehicle itself |
@@ -218,7 +218,7 @@ For the near-ish real time use cases, please use the [events][events] endpoint.
 
 ### Routes
 
-To represent a route, MDS `provider` APIs must create a GeoJSON [`FeatureCollection`][geojson-feature-collection], which includes every [observed point][point-geo] in the route, even those which occur outside the [municipality boundary][muni-boundary].
+To represent a route, SPP `provider` APIs must create a GeoJSON [`FeatureCollection`][geojson-feature-collection], which includes every [observed point][point-geo] in the route, even those which occur outside the [municipality boundary][muni-boundary].
 
 Routes must include at least 2 points: the start point and end point. Routes must include all possible GPS or GNSS samples collected by a Provider. Providers may round the latitude and longitude to the level of precision representing the maximum accuracy of the specific measurement. For example, [a-GPS][agps] is accurate to 5 decimal places, [differential GPS][dgps] is generally accurate to 6 decimal places. Providers may round those readings to the appropriate number for their systems.
 
@@ -280,7 +280,7 @@ Unless stated otherwise by the municipality, this endpoint must return only thos
 
 | Field | Type | Required/Optional | Comments |
 | ----- | ---- | ----------------- | ----- |
-| `provider_id` | UUID | Required | A UUID for the Provider, unique within MDS. See MDS [provider list](/providers.csv). |
+| `provider_id` | UUID | Required | A UUID for the Provider, unique within SPP. See SPP [provider list](/providers.csv). |
 | `provider_name` | String | Required | The public-facing name of the Provider |
 | `device_id` | UUID | Required | A unique device ID in UUID format |
 | `vehicle_id` | String | Required | The Vehicle Identification Number visible on the vehicle itself |
@@ -337,7 +337,7 @@ processing for that hour:
 
 ## Reports
 
-Reports are information that providers can send back to agencies containing aggregated data that is not contained within other MDS endpoints, like counts of special groups of riders. These supplemental reports are not a substitute for other MDS Provider endpoints.
+Reports are information that providers can send back to agencies containing aggregated data that is not contained within other SPP endpoints, like counts of special groups of riders. These supplemental reports are not a substitute for other SPP Provider endpoints.
 
 The authenticated reports are monthly, historic flat files that may be pre-generated by the provider. 
 
@@ -439,19 +439,19 @@ Here are the possible values for the `special_group_type` dimension field:
 | low_income | Trips where a low income discount is applied by the provider, e.g., a discount from a qualified provider equity plan. |	
 | all_riders | All riders from any group                                                                                             |	
 
-Other special group types may be added in future MDS releases as relevant agency and provider use cases are identified. When additional special group types or metrics are proposed, a thorough review of utility and relevance in program oversight, evaluation, and policy development should be done by SPP Working Groups, as well as any privacy implications by the SPP Privacy Committee.
+Other special group types may be added in future SPP releases as relevant agency and provider use cases are identified. When additional special group types or metrics are proposed, a thorough review of utility and relevance in program oversight, evaluation, and policy development should be done by SPP Working Groups, as well as any privacy implications by the SPP Privacy Committee.
 
 [Top][toc]
 
 ### Data Redaction
 
-Some combinations of parameters may return a small count of trips, which could increase a privacy risk of re-identification. To correct for that, Reports does not return data below a certain count of results. This data redaction is called k-anonymity, and the threshold is set at a k-value of 10. For more explanation of this methodology, see our [Data Redaction Guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Data-Redaction).
+Some combinations of parameters may return a small count of trips, which could increase a privacy risk of re-identification. To correct for that, Reports does not return data below a certain count of results. This data redaction is called k-anonymity, and the threshold is set at a k-value of 10. For more explanation of this methodology, see our [Data Redaction Guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Data-Redaction).
 
 **If the query returns fewer than `10` trips in a count, then that row's count value is returned as "-1".** Note "0" values are also returned as "-1" since the goal is to group both low and no count values for privacy. 
 
 As Reports is in [beta][beta], this value may be adjusted in future releases and/or may become dynamic to account for specific categories of use cases and users. To improve the specification and to inform future guidance, beta users are encouraged to share their feedback and questions about k-values on this [discussion thread](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions/622).
 
-Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [MDS Privacy Guide for Cities](https://github.com/shareportation/governance/blob/main/documents/SPP-MDS-Privacy-Guide-for-Cities.pdf). 
+Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [SPP Privacy Guide for Cities](https://github.com/shareportation/governance/blob/main/documents/SPP-SPP-Privacy-Guide-for-Cities.pdf). 
 
 [Top][toc]
 
@@ -459,9 +459,9 @@ Using k-anonymity will reduce, but not necessarily eliminate the risk that an in
 
 ### GBFS
 
-All MDS compatible `provider` APIs must expose a public [GBFS](https://github.com/NABSA/gbfs) feed as well. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility.
+All SPP compatible `provider` APIs must expose a public [GBFS](https://github.com/NABSA/gbfs) feed as well. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility.
 
-GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [MDS Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on MDS and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_MDS.md).
+GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on SPP and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_SPP.md).
 
 [Top][toc]
 
@@ -544,7 +544,7 @@ The `/vehicles` is a near-realtime endpoint and returns the current status of ve
 
 Data in this endpoint should reconcile with data from the historic [`/status_changes`](/provider#status-changes) enpdoint, though `/status_changes` is the source of truth if there are discrepancies. 
 
-As with other MDS APIs, `/vehicles` is intended for use by regulators, not by the general public. `/vehicles` can be deployed by providers as a standalone MDS endpoint for agencies without requiring the use of other endpoints, due to the [modularity](/README.md#modularity) of MDS. See our [MDS Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Note that using authenticated `/vehicles` does not replace the role of a public [GBFS][gbfs] feed in enabling consumer-facing applications. If a provider is using both `/vehicles` and GBFS endpoints, the `/vehicles` endpoint should be considered source of truth regarding an agency's compliance checks.
+As with other SPP APIs, `/vehicles` is intended for use by regulators, not by the general public. `/vehicles` can be deployed by providers as a standalone SPP endpoint for agencies without requiring the use of other endpoints, due to the [modularity](/README.md#modularity) of SPP. See our [SPP Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Vehicles) for how this compares to GBFS `/free_bike_status`. Note that using authenticated `/vehicles` does not replace the role of a public [GBFS][gbfs] feed in enabling consumer-facing applications. If a provider is using both `/vehicles` and GBFS endpoints, the `/vehicles` endpoint should be considered source of truth regarding an agency's compliance checks.
 
 In addition to the standard [Provider payload wrapper](#response-format), responses from this endpoint should contain the last update timestamp and amount of time until the next update in accordance with the [Data Latency Requirements][data-latency]:
 
@@ -567,7 +567,7 @@ In addition to the standard [Provider payload wrapper](#response-format), respon
 
 | Field | Type | Required/Optional | Comments |
 | ----- | ---- | ----------------- | ----- |
-| `provider_id` | UUID | Required | A UUID for the Provider, unique within MDS. See MDS [provider list](/providers.csv). |
+| `provider_id` | UUID | Required | A UUID for the Provider, unique within SPP. See SPP [provider list](/providers.csv). |
 | `provider_name` | String | Required | The public-facing name of the Provider |
 | `device_id` | UUID | Required | A unique device ID in UUID format, should match this device in Provider |
 | `vehicle_id` | String | Required | The Vehicle Identification Number visible on the vehicle itself, should match this device in provider |

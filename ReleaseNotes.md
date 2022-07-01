@@ -10,14 +10,14 @@ The 1.2.0 minor release adds digital program Requirements, new options for polic
 
 See the closed PRs tagged with [Milestone 1.2.0](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.2.0) and [Issues](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+milestone%3A1.2.0+is%3Aclosed) for a full list of changes.
 
-**_General MDS_**
+**_General SPP_**
 
 - [Richer telemetry data](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/589), including [616](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/616), [73](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/73), [51](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/51)
 - [Add cargo_bicycle vehicle type](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/698)
 
 **_Policy_**
 
-- [Program Requirements](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/646) - For agencies to describe program requirements digitally to allow providers and the public to see what MDS and GBFS versions, APIs, endpoints, and fields are required, and communicate available MDS agency information to providers.
+- [Program Requirements](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/646) - For agencies to describe program requirements digitally to allow providers and the public to see what SPP and GBFS versions, APIs, endpoints, and fields are required, and communicate available SPP agency information to providers.
   - [Ability to express data sharing requirements in Policy](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/608) 
   - [Method to Exclude some Provider Fields from Response](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/507)
   - [Retrieve operational zones from operators](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/639)
@@ -32,7 +32,7 @@ See the closed PRs tagged with [Milestone 1.2.0](https://github.com/shareportati
 **_Provider_**
 
 - [Vehicles out of beta](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/637)
-- [Clarify use cases between MDS Vehicles and GBFS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/641)
+- [Clarify use cases between SPP Vehicles and GBFS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/641)
 
 _Minor Updates_
 
@@ -63,7 +63,7 @@ The 1.1.0 minor release adds new top level APIs (geography, jurisdictions), priv
 
 See the closed PRs tagged with [Milestone 1.1.0](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.1.0) and [Issues](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues?q=is%3Aissue+milestone%3A1.1.0+is%3Aclosed) for a full list of changes.
 
-**_MDS_**
+**_SPP_**
 
 - [Policy and Geography can be public](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/585)
 - [Geography-Driven Events](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/503): [Issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/480)
@@ -75,9 +75,9 @@ _Minor Updates_
 - [Stops updates](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/603)
 - [Response time expectations](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/563)
 - [Geography publish date field consistency](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/597)
-- [Adding more cities using MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/591)
-- [Adding more providers using MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/dev/providers.csv)
-- [Added a section for third party software companies using MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/552) and cleaned up home page, moving list content to the SPP website
+- [Adding more cities using SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/591)
+- [Adding more providers using SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/dev/providers.csv)
+- [Added a section for third party software companies using SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/552) and cleaned up home page, moving list content to the SPP website
 - [Update geography_json field type](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/635)
 
 **_Provider_**
@@ -112,13 +112,13 @@ _Minor Updates_
 
 > [Release Plan](https://github.com/shareportation/governance/wiki/Release-1.0.0)
 
-The 1.0.0 release reconciles and aligns many parts of the MDS specification and adds features and updates requested by the community, including many new detailed vehicle states and event types, support for Stops (for docked vehicles, dockless corrals, parking areas), and adding rates (fees/subsidies) to Policy.
+The 1.0.0 release reconciles and aligns many parts of the SPP specification and adds features and updates requested by the community, including many new detailed vehicle states and event types, support for Stops (for docked vehicles, dockless corrals, parking areas), and adding rates (fees/subsidies) to Policy.
 
 ### CHANGES
 
 See the closed PRs tagged with [Milestone 1.0.0](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.0.0) for a full list of changes.
 
-*_MDS_*
+*_SPP_*
 
 * [Reconcile the Provider and Agency language differences](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/506)
   * [New State Machine Diagram](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/530)
@@ -129,7 +129,7 @@ See the closed PRs tagged with [Milestone 1.0.0](https://github.com/shareportati
 * [Adding Stops](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/427) - Beta
    
 * Minor Updates 
-  * [Update cities using MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/520)
+  * [Update cities using SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/520)
   * Update [Austin](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/488), [Louisville](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/515) links
   * [Add link to State of Practice](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/477)
   * [Update GBFS references and links](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/508)
@@ -168,14 +168,14 @@ This release also brings a number of language clarifications from 0.4.0 and new 
 
 ### CHANGES
 
-*_MDS_*
+*_SPP_*
 
-* [MDS officially transferred from LADOT to SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/386):
+* [SPP officially transferred from LADOT to SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/386):
   * [Update license from CC0 to CC-BY](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/390)
   * [Updates to various documentation to support code transfer from LADOT to SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/391)
   * [Switch CODEOWNERS to use SPP teams](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/404)
-  * [Add documentation around currently Supported MDS versions](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/449)
-  * [Add documentation around Understanding MDS APIs](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/452)
+  * [Add documentation around currently Supported SPP versions](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/449)
+  * [Add documentation around Understanding SPP APIs](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/452)
   * [ReleaseGuidelines updates to reflect SPP process and 12 week dev cycle](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/453)
 * [Added "moped" vehicle type](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/416)
 
@@ -265,7 +265,7 @@ This release represents a series of non-breaking changes and clarifications for 
 
 *_Provider_*
 
-* MDS Schema version fix.
+* SPP Schema version fix.
 * [New release process](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/264). Thanks @jfh for documenting, all for participating
 * [Additional documentation around what is considered Breaking / Non-Breaking](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/295). Thanks @rf-
 * [OPTIONS for version negotiation](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/293). Thanks @billdirks
@@ -288,7 +288,7 @@ This release represents a series of non-breaking changes and clarifications for 
 
 > Released 2019-02-15
 
-This release is the first minor version release of MDS with breaking changes for deployed provider API instances.
+This release is the first minor version release of SPP with breaking changes for deployed provider API instances.
 
 ### CHANGES
 
@@ -307,9 +307,9 @@ This release is the first minor version release of MDS with breaking changes for
 
 > Released 2018-12-03
 
-This release is the first patch release of MDS 0.2.
+This release is the first patch release of SPP 0.2.
 
-We did not chose to include the `timestamp` change, as discussed in issue #104, because it is breaking. Early versions of this branch included that change. The change will be made in MDS 0.3.0.
+We did not chose to include the `timestamp` change, as discussed in issue #104, because it is breaking. Early versions of this branch included that change. The change will be made in SPP 0.3.0.
 
 ### CHANGES
 
@@ -330,7 +330,7 @@ This release backports two features from [`0.2.0`](https://github.com/shareporta
 
 * Adding `electric-assist` as a propulsion type [#48](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pull/48)
 
-This makes MDS `0.1.x` series more usable for Mobility Providers.
+This makes SPP `0.1.x` series more usable for Mobility Providers.
 
 ## 0.2.0
 
@@ -356,6 +356,6 @@ This release includes a number of enhancements and clarifications to the [`provi
 
 * Initial release!
 
-* MDS is under active development. As such, pre-`1.0` versions may introduce breaking changes until things stabilize. Every effort will be made to ensure that any breaking change is well documented and that appropriate workarounds are suggested.
+* SPP is under active development. As such, pre-`1.0` versions may introduce breaking changes until things stabilize. Every effort will be made to ensure that any breaking change is well documented and that appropriate workarounds are suggested.
 
 [provider]: https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main/provider

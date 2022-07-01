@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/agency/get_vehicle.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Agency Schema, GET vehicle payload",
+  "title": "The SPP Agency Schema, GET vehicle payload",
   "type": "object",
   "definitions": {},
   "required": [

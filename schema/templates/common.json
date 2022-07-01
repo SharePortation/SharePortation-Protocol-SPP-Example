@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/schema/templates/common.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Common schema definitions for MDS",
+  "title": "Common schema definitions for SPP",
   "definitions": {
     "area_type": {
       "$id": "#/definitions/area_type",
@@ -160,7 +160,7 @@
     "stop": {
       "$id": "#/definitions/stop",
       "type": "object",
-      "description": "The common schema elements for a Stop in MDS",
+      "description": "The common schema elements for a Stop in SPP",
       "required": [
         "stop_id",
         "name",
@@ -189,7 +189,7 @@
         },
         "location": {
           "$id": "#/definitions/stop/properties/location",
-          "$ref": "#/definitions/MDS_Feature_Point",
+          "$ref": "#/definitions/SPP_Feature_Point",
           "description": "Location of the stop"
         },
         "status": {
@@ -272,7 +272,7 @@
     "stop_status": {
       "$id": "#/definitions/stop_status",
       "type": "object",
-      "description": "Status object for a Stop in MDS",
+      "description": "Status object for a Stop in SPP",
       "required": [
         "is_installed",
         "is_renting",
@@ -399,7 +399,7 @@
     "vehicle": {
       "$id": "#/definitions/vehicle",
       "type": "object",
-      "description": "The common schema elements for a Vehicle in MDS",
+      "description": "The common schema elements for a Vehicle in SPP",
       "required": [
         "provider_name",
         "provider_id",
@@ -417,7 +417,7 @@
         "provider_id": {
           "$id": "#/definitions/vehicle/properties/provider_id",
           "$ref": "#/definitions/uuid",
-          "description": "The UUID for the Provider, unique within MDS"
+          "description": "The UUID for the Provider, unique within SPP"
         },
         "device_id": {
           "$id": "#/definitions/vehicle/properties/device_id",
@@ -712,7 +712,7 @@
     "version": {
       "$id": "#/definitions/version",
       "type": "string",
-      "description": "The version of MDS this data represents",
+      "description": "The version of SPP this data represents",
       "examples": [
         "1.2.0"
       ],

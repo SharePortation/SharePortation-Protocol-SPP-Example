@@ -1,6 +1,6 @@
 # Mobility Data Specification: Geography
 
-<a href="/geography/"><img src="https://i.imgur.com/JJdKX8b.png" width="120" align="right" alt="MDS Geography Icon" border="0"></a>
+<a href="/geography/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Geography Icon" border="0"></a>
 
 This specification contains a collection of RESTful APIs used to read Geographies (descriptions of geographical information, e.g. multi-polygons, currently represented via GeoJSON).
 
@@ -35,7 +35,7 @@ The following information applies to all `geography` API endpoints.
 
 ### Versioning
 
-MDS APIs must handle requests for specific versions of the specification from clients.
+SPP APIs must handle requests for specific versions of the specification from clients.
 
 Versioning must be implemented as specified in the [Versioning section][versioning].
 
@@ -45,7 +45,7 @@ Versioning must be implemented as specified in the [Versioning section][versioni
 
 To ensure this Geography API is not creating a breaking change for the 1.1.0 release, it's expected that the data contained in the [`/geographies`](/policy#geography) endpoint in the Policy API is identical to this Geography API. This will ensure that when a Geography ID is used anywhere in this release, the data could be retrieved from either location.
 
-This temporary requirement is to ensure backwards compatibility, but the overall intent is to remove the /policy/geographies endpoint at the next major MDS release.
+This temporary requirement is to ensure backwards compatibility, but the overall intent is to remove the /policy/geographies endpoint at the next major SPP release.
 
 [Top][toc]
 
@@ -121,7 +121,7 @@ This field is optional can be omitted by the publishing Agency.
 
 Type of geography. These specific types are recommendations based on ones commonly defined by agencies.  Others may be created by the Agency as needed, or the optional `geography_type` field may be omitted.
 
-`geography_type` does not imply policy or required actions by providers, but instead is for organizational and discovery purposes within the standalone Geography API. Geographies need to be referenced from other areas of MDS to be meaningfully applied.
+`geography_type` does not imply policy or required actions by providers, but instead is for organizational and discovery purposes within the standalone Geography API. Geographies need to be referenced from other areas of SPP to be meaningfully applied.
 
 | Value                | Description                          |
 | -----                | -----------                          |

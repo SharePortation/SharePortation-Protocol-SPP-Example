@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/provider/trips.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Schema for MDS Provider trips payloads",
+  "title": "Schema for SPP Provider trips payloads",
   "type": "object",
   "definitions": {
     "string": {
@@ -35,15 +35,15 @@
     "version": {
       "$id": "#/definitions/version",
       "type": "string",
-      "description": "The version of MDS this data represents",
+      "description": "The version of SPP this data represents",
       "examples": [
         "1.2.0"
       ],
       "pattern": "^1\\.2\\.[0-9]+$"
     },
-    "MDS_Feature_Point": {
-      "$id": "#/definitions/MDS_Feature_Point",
-      "title": "MDS GeoJSON Feature Point",
+    "SPP_Feature_Point": {
+      "$id": "#/definitions/SPP_Feature_Point",
+      "title": "SPP GeoJSON Feature Point",
       "type": "object",
       "required": [
         "type",
@@ -173,9 +173,9 @@
         "GBP"
       ]
     },
-    "MDS_FeatureCollection_Route": {
-      "$id": "#/definitions/MDS_FeatureCollection_Route",
-      "title": "MDS GeoJSON FeatureCollection Route",
+    "SPP_FeatureCollection_Route": {
+      "$id": "#/definitions/SPP_FeatureCollection_Route",
+      "title": "SPP GeoJSON FeatureCollection Route",
       "type": "object",
       "required": [
         "type",
@@ -191,7 +191,7 @@
         "features": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/MDS_Feature_Point"
+            "$ref": "#/definitions/SPP_Feature_Point"
           },
           "minItems": 2
         },
@@ -285,7 +285,7 @@
               "provider_id": {
                 "$id": "#/definitions/vehicle/properties/provider_id",
                 "$ref": "#/definitions/uuid",
-                "description": "The UUID for the Provider, unique within MDS"
+                "description": "The UUID for the Provider, unique within SPP"
               },
               "device_id": {
                 "$id": "#/definitions/vehicle/properties/device_id",
@@ -334,7 +334,7 @@
               "route": {
                 "$id": "#/properties/data/properties/trips/items/properties/route",
                 "title": "The Route Schema",
-                "$ref": "#/definitions/MDS_FeatureCollection_Route"
+                "$ref": "#/definitions/SPP_FeatureCollection_Route"
               },
               "accuracy": {
                 "$id": "#/properties/data/properties/trips/items/properties/accuracy",

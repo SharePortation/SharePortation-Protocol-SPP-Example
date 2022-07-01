@@ -1,25 +1,25 @@
-# MDS Core Metrics
+# SPP Core Metrics
 
-The core metrics are a set of defined, consistent MDS metrics definitions that provide building blocks for other MDS [metrics](/metrics), regardless of vehicle type. 
+The core metrics are a set of defined, consistent SPP metrics definitions that provide building blocks for other SPP [metrics](/metrics), regardless of vehicle type. 
 
 ## Table of Contents
 
 - [Metrics Definitions](#metrics-definitions)
   - [Dimensions](#dimensions)
   - [Filters](#filters)
-- [Other MDS Metrics](#other-mds-metrics)
+- [Other SPP Metrics](#other-SPP-metrics)
 
 # Metrics Definitions
 
-The table below represents supported MDS core metrics and definition. All metrics are aggregated by time interval and geographic areas. This [document](metrics_methodology.md) provides methodologies and sample calculations of MDS metrics. 
+The table below represents supported SPP core metrics and definition. All metrics are aggregated by time interval and geographic areas. This [document](metrics_methodology.md) provides methodologies and sample calculations of SPP metrics. 
 
 | Number | Metric                                 | Description                                                                                                                       |
 | ------ | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 1.1    | vehicles.[status].avg                  | The average number of vehicles in [MDS status](/agency#vehicle-events).                                                           |
-| 1.2    | vehicles.[status].min                  | The minimum number of vehicles in [MDS status](/agency#vehicle-events).                                                           |
-| 1.3    | vehicles.[status].max                  | The maximum number of vehicles in [MDS status](/agency#vehicle-events).                                                           |
-| 1.4    | vehicles.[status].duration.sum         | The total duration (in seconds) vehicles spent in a specified [MDS status](/agency#vehicle-events).                               |
-| 1.5    | events.[event_type].count              | The number of [MDS event type](/agency#vehicle-events) received.                                                                  |
+| 1.1    | vehicles.[status].avg                  | The average number of vehicles in [SPP status](/agency#vehicle-events).                                                           |
+| 1.2    | vehicles.[status].min                  | The minimum number of vehicles in [SPP status](/agency#vehicle-events).                                                           |
+| 1.3    | vehicles.[status].max                  | The maximum number of vehicles in [SPP status](/agency#vehicle-events).                                                           |
+| 1.4    | vehicles.[status].duration.sum         | The total duration (in seconds) vehicles spent in a specified [SPP status](/agency#vehicle-events).                               |
+| 1.5    | events.[event_type].count              | The number of [SPP event type](/agency#vehicle-events) received.                                                                  |
 | 1.6    | trips.[start_loc/end_loc].count        | The number of trips aggregated by either the start or first enter, or end or final leave locations.                               |
 | 1.7    | trips.[start_loc/end_loc].duration.avg | The average trip duration (in seconds) aggregated by either the start or first enter, or end or final leave locations.            |
 | 1.8    | trips.[start_loc/end_loc].duration.med | The median trip duration (in seconds) aggregated by either the start or first enter, or end or final leave locations.             |
@@ -34,32 +34,32 @@ The table below represents supported MDS core metrics and definition. All metric
 
 ## Dimensions
 
-The following represent the suggested MDS core metric dimensions:
+The following represent the suggested SPP core metric dimensions:
 
 | Dimension          | Description                                                                 |
 | ------------------ | --------------------------------------------------------------------------- |
 | provider_id        | Transportation provider id issued by SPP and [tracked here](/providers.csv) |
-| geography_id       | [MDS Geography](/geography)                                                 |
-| vehicle_type       | [Vehicle Type](/agency#vehicle-type) defined by MDS                         |
+| geography_id       | [SPP Geography](/geography)                                                 |
+| vehicle_type       | [Vehicle Type](/agency#vehicle-type) defined by SPP                         |
 
 [Top][toc]
 
 ## Filters
 
-The following represent the suggested MDS core metric filters:
+The following represent the suggested SPP core metric filters:
 
 | Filter             | Description                                                                                       |
 | ------------------ | ------------------------------------------------------------------------------------------------- |
 | provider_id        | Transportation provider id issued by SPP and [tracked here](/providers.csv)                       |
-| geography_id       | [MDS Geography](/geography)                                                                       |
-| geography_type     | [MDS Geography Type](/geography#geography-type) e.g. census_block, jurisdiction, council_district |
-| vehicle_type       | [Vehicle Type](/agency#vehicle-type) defined by MDS                                               |
+| geography_id       | [SPP Geography](/geography)                                                                       |
+| geography_type     | [SPP Geography Type](/geography#geography-type) e.g. census_block, jurisdiction, council_district |
+| vehicle_type       | [Vehicle Type](/agency#vehicle-type) defined by SPP                                               |
 
 [Top][toc]
 
-# Other MDS Metrics
+# Other SPP Metrics
 
-- [MDS Dockless Metrics](dockless_metrics.md)
+- [SPP Dockless Metrics](dockless_metrics.md)
 
 [Top][toc]
 

@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/policy/policy.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "The MDS Policy Schema",
+  "title": "The SPP Policy Schema",
   "type": "object",
   "definitions": {
     "policy": {
@@ -490,7 +490,7 @@
     "version": {
       "$id": "#/definitions/version",
       "type": "string",
-      "description": "The version of MDS this data represents",
+      "description": "The version of SPP this data represents",
       "examples": [
         "1.2.0"
       ],
@@ -642,7 +642,7 @@
     "version": {
       "$id": "#/properties/version",
       "$ref": "#/definitions/version",
-      "description": "The version of MDS that the Policy represents"
+      "description": "The version of SPP that the Policy represents"
     }
   },
   "additionalProperties": false

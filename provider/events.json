@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/provider/events.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Schema for MDS Provider events payloads",
+  "title": "Schema for SPP Provider events payloads",
   "type": "object",
   "definitions": {
     "string": {
@@ -35,15 +35,15 @@
     "version": {
       "$id": "#/definitions/version",
       "type": "string",
-      "description": "The version of MDS this data represents",
+      "description": "The version of SPP this data represents",
       "examples": [
         "1.2.0"
       ],
       "pattern": "^1\\.2\\.[0-9]+$"
     },
-    "MDS_Feature_Point": {
-      "$id": "#/definitions/MDS_Feature_Point",
-      "title": "MDS GeoJSON Feature Point",
+    "SPP_Feature_Point": {
+      "$id": "#/definitions/SPP_Feature_Point",
+      "title": "SPP GeoJSON Feature Point",
       "type": "object",
       "required": [
         "type",
@@ -352,7 +352,7 @@
               "provider_id": {
                 "$id": "#/definitions/vehicle/properties/provider_id",
                 "$ref": "#/definitions/uuid",
-                "description": "The UUID for the Provider, unique within MDS"
+                "description": "The UUID for the Provider, unique within SPP"
               },
               "device_id": {
                 "$id": "#/definitions/vehicle/properties/device_id",
@@ -387,7 +387,7 @@
               },
               "event_location": {
                 "$id": "#/properties/data/properties/status_changes/items/properties/event_location",
-                "$ref": "#/definitions/MDS_Feature_Point",
+                "$ref": "#/definitions/SPP_Feature_Point",
                 "description": "The GPS or GNSS coordinates of where the event occurred"
               },
               "vehicle_state": {

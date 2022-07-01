@@ -49,7 +49,7 @@ def endpoint_schema(endpoint, extra_definitions={}):
         "timestamp",
         "uuid",
         "version",
-        common.MDS_FEATURE_POINT
+        common.SPP_FEATURE_POINT
     )
     definitions.update(common.point_definition())
     definitions.update(extra_definitions)
@@ -80,16 +80,16 @@ def trips_schema():
     Create the schema for the /trips endpoint.
     """
     # generate the route definition
-    mds_feature_collection_route = feature_collection_schema(
-        id = common.definition_id("MDS_FeatureCollection_Route"),
-        title = "MDS GeoJSON FeatureCollection Route",
-        # 1. Only allow MDS Feature Points
+    SPP_feature_collection_route = feature_collection_schema(
+        id = common.definition_id("SPP_FeatureCollection_Route"),
+        title = "SPP GeoJSON FeatureCollection Route",
+        # 1. Only allow SPP Feature Points
         # 2. There must be *at least* two Features in the FeatureCollection.
-        features = { "items": { "$ref": common.definition_id("MDS_Feature_Point") }, "minItems": 2 }
+        features = { "items": { "$ref": common.definition_id("SPP_Feature_Point") }, "minItems": 2 }
     )
     trips_definitions = {
         "currency": common.load_definitions("currency"),
-        "MDS_FeatureCollection_Route": mds_feature_collection_route
+        "SPP_FeatureCollection_Route": SPP_feature_collection_route
     }
 
     # create the trips schema

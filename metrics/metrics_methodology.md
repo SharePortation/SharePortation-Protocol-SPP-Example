@@ -1,6 +1,6 @@
 # Metrics Methodology Documentation
 
-This section provides methodologies and sample calculations of [MDS metrics](/metrics/README.md). The Primary audience for this Guide is cities, mobility service providers, and third-party ecosystem services to have a standard way to consistently compute mobility metrics, while consumers of metrics may also find this document helpful to better understand metric parameters and assumptions.
+This section provides methodologies and sample calculations of [SPP metrics](/metrics/README.md). The Primary audience for this Guide is cities, mobility service providers, and third-party ecosystem services to have a standard way to consistently compute mobility metrics, while consumers of metrics may also find this document helpful to better understand metric parameters and assumptions.
 
 **Assumptions:** Metrics calculations assume datasets are complete, received on time, and have valid state transitions unless noted otherwise. 
 
@@ -10,7 +10,7 @@ This section provides methodologies and sample calculations of [MDS metrics](/me
 
 ## Table of Contents
 
-- [1. MDS Core Metrics](#1-mds-core-metrics)
+- [1. SPP Core Metrics](#1-SPP-core-metrics)
   - [1.1 vehicles.[state].avg](#11-vehiclesstateavg)
   - [1.2 vehicles.[state].min](#12-vehiclesstatemin)
   - [1.3 vehicles.[state].max](#13-vehiclesstatemax)
@@ -21,7 +21,7 @@ This section provides methodologies and sample calculations of [MDS metrics](/me
   - [1.8 trips.[start_loc/end_loc]_duration.sum](#18-tripsstart_locend_loc_durationsum)
   - [1.9 trips.[start_loc/end_loc]_distance.avg](#19-tripsstart_locend_loc_distanceavg)
   - [1.10 trips.[start_loc/end_loc]_distance.sum](#110-tripsstart_locend_loc_distancesum)
-- [2. MDS Dockless Metrics](#2-mds-dockless-metrics)
+- [2. SPP Dockless Metrics](#2-SPP-dockless-metrics)
   - [2.1 dockless.deployed.avg](#21-docklessdeployedavg)
   - [2.2 dockless.deployed.avg.min](#22-docklessdeployedavgmin)
   - [2.3 dockless.deployed.min](#23-docklessdeployedmin)
@@ -34,13 +34,13 @@ This section provides methodologies and sample calculations of [MDS metrics](/me
   - [2.10 dockless.utilization.trips_per_vehicle.avg](#210-docklessutilizationtrips_per_vehicleavg)
 - [Compatibility with Mobility Data Collaborative Metrics](#compatibility-with-mobility-data-collaborative-metrics)
 
-## 1. MDS Core Metrics
+## 1. SPP Core Metrics
 
-Reference to MDS Core Metrics specification in Github: [link](/metrics/core_metrics.md) 
+Reference to SPP Core Metrics specification in Github: [link](/metrics/core_metrics.md) 
 
 ### 1.1 `vehicles.[state].avg`
 
-The average number of vehicles in an [MDS state](../general-information.md#vehicle-states) during the interval within a geographic area. To calculate **vehicles.[state].avg**, we will take a snapshot of vehicle status every N-period, and  average the number of vehicles shown to be in status. The default for N is a 1-minute snapshot, with the goal to compute metrics at the largest interval where the least amount of change will occur. Although depending on use cases and computational capabilities, the snapshot frequency can be configurable.
+The average number of vehicles in an [SPP state](../general-information.md#vehicle-states) during the interval within a geographic area. To calculate **vehicles.[state].avg**, we will take a snapshot of vehicle status every N-period, and  average the number of vehicles shown to be in status. The default for N is a 1-minute snapshot, with the goal to compute metrics at the largest interval where the least amount of change will occur. Although depending on use cases and computational capabilities, the snapshot frequency can be configurable.
 
 **Sample**
 
@@ -144,7 +144,7 @@ The sample dataset above will return **vehicles.[state].duration.sum** as shown 
 
 ### 1.5 `events.[event_type].count`
 
-The number of [MDS events]../agency#vehicle---event) received during the time interval within a geographical area.
+The number of [SPP events]../agency#vehicle---event) received during the time interval within a geographical area.
 
 **Sample**
 
@@ -249,9 +249,9 @@ A sample metric output table for **trips.[start_loc/end_loc]_distance.sum**.
 | trips.end_loc.distance.sum   | 10:30             | PT15M                | neighborhood_council | Downtown            | 1937  |
 | trips.end_loc.distance.sum   | 10:45             | PT15M                | neighborhood_council | Downtown            | 420   |
 
-## 2. MDS Dockless Metrics
+## 2. SPP Dockless Metrics
 
-Reference to MDS Dockless Metrics specification in Github: [link](../metrics/dockless_metrics.md) 
+Reference to SPP Dockless Metrics specification in Github: [link](../metrics/dockless_metrics.md) 
 
 ### 2.1 `dockless.deployed.avg`
 
@@ -458,9 +458,9 @@ Provided pre-calculated **trips.start.count** and **dockless.avg**, the **dockle
 
 ## Compatibility with Mobility Data Collaborative Metrics
 
-The table below maps MDS Metrics to Mobility Data Collaborative (MDC) [Glossary Metrics](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/files/4659200/MDCGlossaryMetrics02202004.pdf).[**](#footnotes)   
+The table below maps SPP Metrics to Mobility Data Collaborative (MDC) [Glossary Metrics](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/files/4659200/MDCGlossaryMetrics02202004.pdf).[**](#footnotes)   
 
-| MDS Core Metrics                                 | MDC Metrics                                                                                            |
+| SPP Core Metrics                                 | MDC Metrics                                                                                            |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | 1.1    vehicles.[state].avg                      | 6.1   Number of Vehicle of a Specified Status[*](#footnotes),  6.2   Average Number of Vehicles of a Specified Status[*](#footnotes)  |
 | 1.2    vehicles.[state].min                      | 6.6   Absolute Minimum Number of Vehicles of a Specified Status[*](#footnotes)                                       |
@@ -473,7 +473,7 @@ The table below maps MDS Metrics to Mobility Data Collaborative (MDC) [Glossary 
 | 1.9    trips.[start_loc/end_loc]_distance.avg    | -                                                                                                      |
 | 1.10  trips.[start_loc/end_loc]_distance.sum     | -                                                                                                      |
 
-| MDS Dockless Metrics                             | MDC Metrics                            |
+| SPP Dockless Metrics                             | MDC Metrics                            |
 | ------------------------------------------------ | -------------------------------------- |
 | 2.1    dockless.deployed.avg                     | 6.1   Number of Vehicle of a Specified Status[*](#footnotes), 6.2   Average Number of Vehicles of a Specified Status[*](#footnotes)  |
 | 2.2    dockless.deployed.avg.min                 | 6.5   Minimum Average Number of Vehicles of a Specified Status[*](#footnotes)                                       |

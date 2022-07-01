@@ -1,4 +1,4 @@
-# MDS Schema Definitions
+# SPP Schema Definitions
 
 This directory contains the templates and code that _generate_ the official JSON schemas for the Mobility Data Specification. However, the official schema documents live inside the `provider`, `agency` or appropriate folder.
 
