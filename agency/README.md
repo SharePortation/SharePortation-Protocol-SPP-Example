@@ -1,6 +1,6 @@
 # Mobility Data Specification: **Agency**
 
-<a href="/agency/"><img src="https://i.imgur.com/HzMWtaI.png" width="120" align="right" alt="MDS Agency Icon" border="0"></a>
+<a href="/agency/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Agency Icon" border="0"></a>
 
 The Agency API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Agency API when events (such as a trip start or vehicle status change) occur in their systems.
 
@@ -22,7 +22,7 @@ This specification contains a collection of RESTful APIs used to specify the dig
 
 ## General information
 
-This specification uses data types including timestamps, UUIDs, and vehicle state definitions as described in the MDS [General Information][general] document.
+This specification uses data types including timestamps, UUIDs, and vehicle state definitions as described in the SPP [General Information][general] document.
 
 [Top][toc]
 

@@ -1,6 +1,6 @@
 # Mobility Data Specification: Jurisdiction
 
-<a href="/jurisdiction/"><img src="https://i.imgur.com/tCRCfxT.png" width="120" align="right" alt="MDS Jurisdiction Icon" border="0"></a>
+<a href="/jurisdiction/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Jurisdiction Icon" border="0"></a>
 
 This specification details the purpose, use cases, and schema for Jurisdictions. Jurisdictions are an optional service that are served by a coordinated group of agencies. Jurisdictions can be '[optionally authenticated](/general-information.md#optional-authentication)', making the endpoints unauthenticated and public. In the future this will shift to 'optionally private', where Jursidictions will be public by default. Note that it serves a different purpose from the [Geography](/geography) API, though it does reference areas within Geography by ID.
 
@@ -18,9 +18,9 @@ This specification details the purpose, use cases, and schema for Jurisdictions.
 
 ## Background
 
-City and transportation agencies need to regulate mobility within their own jurisdictions. Within a collection of agencies under a single MDS software deployment, those agencies need to coordinate and share relevant data between one another when their jurisdictions overlap.
+City and transportation agencies need to regulate mobility within their own jurisdictions. Within a collection of agencies under a single SPP software deployment, those agencies need to coordinate and share relevant data between one another when their jurisdictions overlap.
 
-The jurisdictions API helps to solve the following problems when implementing MDS in a multi-jurisdictional environment:
+The jurisdictions API helps to solve the following problems when implementing SPP in a multi-jurisdictional environment:
 
 - Giving agencies a mechanism to communicate boundaries between one another and to mobility providers.
 - Some agencies manage multiple overlapping jurisdictions and need a mechanism to administer scope and permissions to data.
@@ -43,9 +43,9 @@ The Jurisdictions API and all of its endpoints are marked as a [beta feature](ht
 
 ### 1. Defining boundaries and what the vehicle state `elsewhere` means
 
-For a single jurisdiction MDS deployment, a city designates a jurisdiction that providers can reference and know in what area to send events. When a trip leaves the LADOT jurisdiction, providers need to send an event with the vehicle state set to `elsewhere`.
+For a single jurisdiction SPP deployment, a city designates a jurisdiction that providers can reference and know in what area to send events. When a trip leaves the LADOT jurisdiction, providers need to send an event with the vehicle state set to `elsewhere`.
 
-Cities and agencies contained within the MPO would internally be able filter for their own jurisdictional data. This would allow mobility providers to not need to send MDS data to multiple MDS instances.
+Cities and agencies contained within the MPO would internally be able filter for their own jurisdictional data. This would allow mobility providers to not need to send SPP data to multiple SPP instances.
 
 In addition, Agency authority have an explicit revision mechanism through a canonical API.
 
@@ -57,7 +57,7 @@ Example: LADOT has jurisdictional authority over the city of Los Angeles for mic
 
 ### 3. Access scoping
 
-Example: A SaaS company contracts with Miami-Dade County to provide MDS. There are 34 cities within the county. Miami-Dade County needs to assign permissions to each city to control who writes policy, based on jurisdictions. A Jurisdictions object with a stable identifier can be used for access control.
+Example: A SaaS company contracts with Miami-Dade County to provide SPP. There are 34 cities within the county. Miami-Dade County needs to assign permissions to each city to control who writes policy, based on jurisdictions. A Jurisdictions object with a stable identifier can be used for access control.
 
 ### 4. Agencies need to grant application access
 

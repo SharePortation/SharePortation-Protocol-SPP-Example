@@ -1,6 +1,6 @@
 # Mobility Data Specification: Policy
 
-<a href="/policy/"><img src="https://i.imgur.com/66QXveN.png" width="120" align="right" alt="MDS Policy Icon" border="0"></a>
+<a href="/policy/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Policy Icon" border="0"></a>
 
 The Policy API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Policy API to get information about local rules that may affect the operation of their mobility service or which may be used to determine compliance.
 
@@ -80,7 +80,7 @@ The machine-readable format allows Providers to obtain policies and compute comp
 
 Policies shall be published by regulatory bodies or their authorized delegates as JSON objects. These JSON objects shall be served by either [flat files](#flat-files) or via [REST API endpoints](#rest-endpoints). In either case, policy data shall follow the [schema](#schema) outlined below.
 
-Policies typically refer to one or more associated geographies. Geographic information is obtained from the MDS [Geography](/geography#general-information) API.  Each policy and geography shall have a unique ID (UUID).
+Policies typically refer to one or more associated geographies. Geographic information is obtained from the SPP [Geography](/geography#general-information) API.  Each policy and geography shall have a unique ID (UUID).
 
 Published policies, like geographies, should be treated as immutable data. Obsoleting or otherwise changing a policy is accomplished by publishing a new policy with a field named `prev_policies`, a list of UUID references to the policy or policies superseded by the new policy.
 
@@ -110,7 +110,7 @@ Responses must set the `Content-Type` header, as specified in the [versioning][v
 
 The response to a client request must include a valid HTTP status code defined in the [IANA HTTP Status Code Registry][iana].
 
-See the [Responses section][responses] for information on valid MDS response codes and the [Error Messages section][error-messages] for information on formatting error messages.
+See the [Responses section][responses] for information on valid SPP response codes and the [Error Messages section][error-messages] for information on formatting error messages.
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Policies will be returned in order of effective date (see schema below), with pa
 
 ### Geographies
 
-**Deprecated:** see the new [Geography API](/geography#transition-from-policy) to understand the transistion away from this endpoint, and how to support both in MDS 1.x.0 releases.
+**Deprecated:** see the new [Geography API](/geography#transition-from-policy) to understand the transistion away from this endpoint, and how to support both in SPP 1.x.0 releases.
 
 **Endpoint**: `/geographies/{id}`  
 **Method**: `GET`  
@@ -226,7 +226,7 @@ The optional `end_date` field applies to all policies represented in the file.
 
 All response fields must use `lower_case_with_underscores`.
 
-Response bodies must be a `UTF-8` encoded JSON object and must minimally include the MDS `version`, a timestamp indicating the last time the data was `updated`, and a `data` payload:
+Response bodies must be a `UTF-8` encoded JSON object and must minimally include the SPP `version`, a timestamp indicating the last time the data was `updated`, and a `data` payload:
 
 ```jsonc
 {
@@ -254,7 +254,7 @@ An individual `Policy` object is defined by the following fields:
 | ---------------- | --------------- | ---------- | ----------------------------------------------------------------------------------- |
 | `name`           | String          | Required   | Name of policy                                                                      |
 | `policy_id`      | UUID            | Required   | Unique ID of policy                                                                 |
-| `provider_ids`   | UUID[]          | Optional    | Providers for whom this policy is applicable; empty arrays and `null`/absent implies all Providers. See MDS [provider list](/providers.csv). |
+| `provider_ids`   | UUID[]          | Optional    | Providers for whom this policy is applicable; empty arrays and `null`/absent implies all Providers. See SPP [provider list](/providers.csv). |
 | `description`    | String          | Required   | Description of policy                                                               |
 | `currency`       | String          | Optional   | An ISO 4217 Alphabetic Currency Code representing the [currency](../general-information.md#costs-and-currencies) of all Rules of [type](#rule-types) `rate`.|
 | `start_date`     | [timestamp][ts] | Required   | Beginning date/time of policy enforcement. In order to give providers sufficient time to poll, `start_date` must be at least 20 minutes after `published_date`.                                           |
@@ -325,7 +325,7 @@ An individual `Rule` object is defined by the following fields:
 
 ### Geography
 
-**Deprecated:** see the new [Geography API](/geography#transition-from-policy) to understand the transistion away from this endpoint, and how to support both in a MDS 1.x.0 release.
+**Deprecated:** see the new [Geography API](/geography#transition-from-policy) to understand the transistion away from this endpoint, and how to support both in a SPP 1.x.0 release.
 
 | Name             | Type      | Required / Optional | Description                                                                         |
 | ---------------- | --------- | --- | ----------------------------------------------------------------------------------- |
@@ -340,7 +340,7 @@ An individual `Rule` object is defined by the following fields:
 [Top][toc]
 
 ### Rates
-Rate-related properties can currently be specified on `rate` and `time` Rules. Note: A future MDS version will likely support rates for `count` and `speed` rules, but their behavior is currently undefined.
+Rate-related properties can currently be specified on `rate` and `time` Rules. Note: A future SPP version will likely support rates for `count` and `speed` rules, but their behavior is currently undefined.
 
 **[Beta feature](/general-information.md#beta-features)**: *Yes (as of 1.0.0)*. [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/674)  
 
@@ -422,15 +422,15 @@ The internal mechanics of ordering are up to the Policy editing and hosting soft
 
 ### Requirement
 
-A public agency's Policy program Requirements endpoint enumerates all of the parts of MDS, GBFS, and other specifications that an agency requires from providers for certain programs, including APIs, endpoints, and optional fields, as well as information for providers about the APIs the agency is hosting. The program requirements are specific to the needs and use cases of each agency, and ensure there is clarity on what data is being asked for in operating policy documents from providers, reducing the burden on both. This also allows additional public transparency and accountability around data requirements from agencies, and encourages privacy by allowing agencies to ask for only the data they need.
+A public agency's Policy program Requirements endpoint enumerates all of the parts of SPP, GBFS, and other specifications that an agency requires from providers for certain programs, including APIs, endpoints, and optional fields, as well as information for providers about the APIs the agency is hosting. The program requirements are specific to the needs and use cases of each agency, and ensure there is clarity on what data is being asked for in operating policy documents from providers, reducing the burden on both. This also allows additional public transparency and accountability around data requirements from agencies, and encourages privacy by allowing agencies to ask for only the data they need.
 
-Requirements can also be used to define a scaled-down MDS implementation in situations where an agency has more limited regulatory goals, has legal limitations on the types of data they can collect, or wants to use a lightweight version of MDS for a pilot project or other experiment where aspects of a full MDS implementation would be irrelevant or unnecessary.
+Requirements can also be used to define a scaled-down SPP implementation in situations where an agency has more limited regulatory goals, has legal limitations on the types of data they can collect, or wants to use a lightweight version of SPP for a pilot project or other experiment where aspects of a full SPP implementation would be irrelevant or unnecessary.
 
 See [Policy Requirements Examples](/policy/examples/requirements.md) for ideas on how this can be implemented.
 
 #### Public Hosting
 
-This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/main/technical/SPP-MDS-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with MDS you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID).
+This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/main/technical/SPP-SPP-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with SPP you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID).
 
 #### Requirement Update Frequency
 
@@ -438,13 +438,13 @@ The SPP recommends updating the Requirements feed no more than monthly, and you 
 
 #### Version Tracking
 
-If you are upgrading to a new MDS version, it is recommended to create a new requirements file at a new URL, since field names and available options may have changed. To make this more obvious, the MDS version number could be part of your URL, e.g. "https://mds.cityname.gov/requirements/1.2.0". 
+If you are upgrading to a new SPP version, it is recommended to create a new requirements file at a new URL, since field names and available options may have changed. To make this more obvious, the SPP version number could be part of your URL, e.g. "https://SPP.cityname.gov/requirements/1.2.0". 
 
-When requirements are updated within the same MDS version, in the [metadata](#requirement-metadata) section, increment the `file_version` value by one and update the `last_updated` timestamp. Though not required, you may choose to use the  `start_date` and `end_date` fields in the [programs](#requirement-programs) section to keep retired requirements accessible. We also recommend hosting your requirements file in a location that has a publicly-accessible version history, like GitHub or Bitbucket, or keeping previous versions accessible with a versioned URL, e.g. "https://mds.cityname.gov/requirements/1.2.0/v3". 
+When requirements are updated within the same SPP version, in the [metadata](#requirement-metadata) section, increment the `file_version` value by one and update the `last_updated` timestamp. Though not required, you may choose to use the  `start_date` and `end_date` fields in the [programs](#requirement-programs) section to keep retired requirements accessible. We also recommend hosting your requirements file in a location that has a publicly-accessible version history, like GitHub or Bitbucket, or keeping previous versions accessible with a versioned URL, e.g. "https://SPP.cityname.gov/requirements/1.2.0/v3". 
 
 #### Beta Limitations
 
-Note that while Requirements is in [beta](#Requirements) in this **minor**, non-breaking MDS 1.2.0 release, items listed as "required" or "disallowed" will be treated as a _request_ only by default (precluding intentional formal agency communications with providers) to prevent an _unintentional_ burden on providers. For the next **major**, breaking MDS 2.0.0 release, these items will be required or disallowed as documented.
+Note that while Requirements is in [beta](#Requirements) in this **minor**, non-breaking SPP 1.2.0 release, items listed as "required" or "disallowed" will be treated as a _request_ only by default (precluding intentional formal agency communications with providers) to prevent an _unintentional_ burden on providers. For the next **major**, breaking SPP 2.0.0 release, these items will be required or disallowed as documented.
 
 #### Requirement Format
 
@@ -481,7 +481,7 @@ An agency's program [Requirements](#requirements) endpoint contains a number of 
         // other data specs per the "Requirement Data Specs" section
       ]
     },
-    // other MDS versions per the "Requriement MDS Version" section
+    // other SPP versions per the "Requriement SPP Version" section
   }
 }
 ```
@@ -502,7 +502,7 @@ Contains metadata applicable to the agency and at the top of its [Requirement](#
 ```jsonc
 {
   "metadata": {
-    "mds_release": "[TEXT]",
+    "SPP_release": "[TEXT]",
     "file_version": "[INTEGER]",
     "last_updated": "[TIMESTAMP]",
     "max_update_interval": "[DURATION]",
@@ -514,25 +514,25 @@ Contains metadata applicable to the agency and at the top of its [Requirement](#
     "agency_website_url": "[URL]"
     "url": "[URL]"
   },
-  "mds_versions" [
-    // Requirement MDS Versions
+  "SPP_versions" [
+    // Requirement SPP Versions
   ]
 }
 ```
 
 | Name                         | Type            | Required / Optional | Description              |
 | ---------------------------- | --------------- | -------- | ----------------------------------- |
-| `mds_release`                | text            | Required | Release of MDS that the **requirements data feed** aligns to, based on official MDS releases. E.g. "1.2.0" |
+| `SPP_release`                | text            | Required | Release of SPP that the **requirements data feed** aligns to, based on official SPP releases. E.g. "1.2.0" |
 | `file_version`               | integer         | Required | Version of this file. Increment 1 with each modification. See [version tracking](#version-tracking) for details. E.g. "3" |
 | `last_updated`               | [timestamp][ts] | Required | When this file `version` was last updated. See [version tracking](#version-tracking) for details. E.g. "1611958740" |
 | `max_update_interval`        | duration        | Required | The expected maximum frequency with which this file could be updated. [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). E.g. "P1M" |
-| `agency_id`                  | UUID            | Required | UUID of the agency this file applies to. Must come from [agencies.csv](/agencies.csv) file, per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID). E.g. "737a9c62-c0cb-4c93-be43-271d21b784b5" |
+| `agency_id`                  | UUID            | Required | UUID of the agency this file applies to. Must come from [agencies.csv](/agencies.csv) file, per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID). E.g. "737a9c62-c0cb-4c93-be43-271d21b784b5" |
 | `agency_name`                | text            | Required | Name of the agency this file applies to. E.g. "Louisville Metro" |
-| `agency_timezone`            | timezone        | Required | [TZ Database Name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) used for dates and times in Requirements and across all MDS endpoints. E.g. "America/New_York" |
-| `agency_language`            | text            | Required | An [IETF BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language code, used across all MDS endpoints. E.g. "en-US" |
-| `agency_currency`            | text            | Required | Currency used for all monetary values across all MDS endpoints. E.g. "USD" |
+| `agency_timezone`            | timezone        | Required | [TZ Database Name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) used for dates and times in Requirements and across all SPP endpoints. E.g. "America/New_York" |
+| `agency_language`            | text            | Required | An [IETF BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language code, used across all SPP endpoints. E.g. "en-US" |
+| `agency_currency`            | text            | Required | Currency used for all monetary values across all SPP endpoints. E.g. "USD" |
 | `agency_website_url`         | URL             | Required | URL of the agency's general transportation page. E.g. "https://www.cityname.gov/transportation/" |
-| `url`                        | URL             | Required | URL of this file. Must be added to [agencies.csv](/agencies.csv), per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID). E.g.  "https://mds.cityname.gov/requirements/1.2.0" |
+| `url`                        | URL             | Required | URL of this file. Must be added to [agencies.csv](/agencies.csv), per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-SPP-Agency-ID). E.g.  "https://SPP.cityname.gov/requirements/1.2.0" |
 
 [Top][toc]
 
@@ -540,7 +540,7 @@ Contains metadata applicable to the agency and at the top of its [Requirement](#
 
 Contains information about an agency's programs, with links to policy documents, and a list of providers and data specs/APIs/endpoints/fields that the program applies to over a certain time frame in its [Requirement](#requirement) data feed in the `required_data_specs` section.
 
-Unique combinations for data specs, specific providers, vehicle types, policies, and dates (past, current, or future) can be defined. For example an agency can define MDS version 1.2.0 and GBFS 2.2 for Provider #1 in a pilot with beta endpoints and optional fields, MDS version 1.2.0 for other providers without beta features starting a month from now, and MDS version 1.1.0 for Provider #2 with docked bikeshare.
+Unique combinations for data specs, specific providers, vehicle types, policies, and dates (past, current, or future) can be defined. For example an agency can define SPP version 1.2.0 and GBFS 2.2 for Provider #1 in a pilot with beta endpoints and optional fields, SPP version 1.2.0 for other providers without beta features starting a month from now, and SPP version 1.1.0 for Provider #2 with docked bikeshare.
 
 ```jsonc
 // ...
@@ -572,9 +572,9 @@ Unique combinations for data specs, specific providers, vehicle types, policies,
 
 | Name                         | Type            | Required / Optional | Description              |
 | ---------------------------- | --------------- | -------- | ----------------------------------- |
-| `description`                | text            | Required | Simple agency program description of this combination of MDS, providers, vehicles, and time frame. |
+| `description`                | text            | Required | Simple agency program description of this combination of SPP, providers, vehicles, and time frame. |
 | `program_website_url`        | URL             | Required | URL of the agency's transportation policy page. E.g. "https://www.cityname.gov/transportation/shared-devices.htm" |
-| `program_document_url`        | URL             | Optional | URL of the agency's operating permit rules that mention data requirements. E.g. "https://www.cityname.gov/mds_data_policy.pdf" |
+| `program_document_url`        | URL             | Optional | URL of the agency's operating permit rules that mention data requirements. E.g. "https://www.cityname.gov/SPP_data_policy.pdf" |
 | `provider_ids`               | UUID[]          | Required | Array of provider UUIDs that apply to this group the requirements |
 | `vehicle_type`               | Enum            | Optional | Array of [Vehicle Types](../general-information.md#vehicle-types) that apply to this requirement. If absent it applies to all vehicle types. |
 | `start_date`                 | [timestamp][ts] | Required | Beginning date/time of requirements |
@@ -585,7 +585,7 @@ Unique combinations for data specs, specific providers, vehicle types, policies,
 
 #### Requirement Data Specs
 
-For each combination of items in a program, you can specify the data specs, APIs, endpoints, and optional fields that are required per your agency's program policies. This is an array within the [Requirement MDS Versions](#requirement-mds-versions) `mds_apis` section in the [Requirement](#requirement) data feed.
+For each combination of items in a program, you can specify the data specs, APIs, endpoints, and optional fields that are required per your agency's program policies. This is an array within the [Requirement SPP Versions](#requirement-SPP-versions) `SPP_apis` section in the [Requirement](#requirement) data feed.
 
 ```jsonc
 // ...
@@ -611,7 +611,7 @@ For each combination of items in a program, you can specify the data specs, APIs
 
 | Name                 | Type   | Required / Optional | Description              |
 | -------------------- | ------ | -------- | ----------------------------------- |
-| `data_spec_name`     | Enum   | Required | Name of the data spec required. Supported values are: '[MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/ms-requirements)', '[GBFS](https://github.com/NABSA/gbfs/tree/v2.2)'. Others like GOFS, GTFS, TOMP-API, etc can be tested by agencies and officially standardized here in the future -- leave your feedback on [this issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/682). |
+| `data_spec_name`     | Enum   | Required | Name of the data spec required. Supported values are: '[SPP](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/ms-requirements)', '[GBFS](https://github.com/NABSA/gbfs/tree/v2.2)'. Others like GOFS, GTFS, TOMP-API, etc can be tested by agencies and officially standardized here in the future -- leave your feedback on [this issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/682). |
 | `version`            | Text   | Required | Version number of the data spec required. E.g. '1.2.0' |
 | `required_apis`      | Array  | Conditionally Required | Name of the [Requirement APIs](#requirement-apis) that need to be served by providers. At least one API is required. APIs not listed will not be available to the agency. |
 | `available_apis`     | Array  | Conditionally Required | Name of the [Requirement APIs](#requirement-apis) that are being served by agencies.  Not applicable to GBFS. APIs not listed will not be available to the provider. |
@@ -671,8 +671,8 @@ You may also show which APIs, endpoints, and fields your agency is serving to pr
 
 | Name                 | Type  | Required/Optional | Description                |
 | -------------------- | ----- | -------- | ----------------------------------- |
-| `api_name`           | Text  | Required | Name of the applicable API required. At least one API is required. APIs not listed will not be available to the agency. E.g. for MDS: 'provider', or 'agency'. For GBFS, this field is omitted since GBFS starts at the `endpoint` level. |
-| `endpoint_name`      | Text  | Required | Name of the required endpoint under the API. At least one endpoint is required. E.g. for MDS 'provider': 'trips' |
+| `api_name`           | Text  | Required | Name of the applicable API required. At least one API is required. APIs not listed will not be available to the agency. E.g. for SPP: 'provider', or 'agency'. For GBFS, this field is omitted since GBFS starts at the `endpoint` level. |
+| `endpoint_name`      | Text  | Required | Name of the required endpoint under the API. At least one endpoint is required. E.g. for SPP 'provider': 'trips' |
 
 **Provider Endpoints** - Specific to the `required_apis` array
 
@@ -680,24 +680,24 @@ You may also show which APIs, endpoints, and fields your agency is serving to pr
 | -------------------- | ----- | -------- | ----------------------------------- |
 | `required_endpoints` | Array | Required | Array of optional endpoints required by the agency. At least one is required. Endpoints not listed will not be available to the agency. |
 | `required_fields`    | Array | Optional | Array of optional field names required by the agency. Can be omitted if no optional fields are required. Use dot notation for nested fields. See **special notes** below. |
-| `disallowed_fields`  | Array | Optional | Array of optional field names which must not be returned by in the endpoint, even if required in MDS. Use dot notation for nested fields. See **special notes** below. |
+| `disallowed_fields`  | Array | Optional | Array of optional field names which must not be returned by in the endpoint, even if required in SPP. Use dot notation for nested fields. See **special notes** below. |
 
 **Agency Endpoints** - Specific to the `available_apis` array
 
 | Name                 | Type  | Required/Optional | Description                |
 | -------------------- | ----- | -------- | ----------------------------------- |
 | `available_endpoints`| Array | Required | Array of endpoints provided by the agency. At least one is required. Endpoints not listed will not be available to the provider. |
-| `url`                | URL   | Optional | Location of API endpoint url. Required if the API is unauthenticated and public, optional if endpoint is authenticated and private. E.g. "https://mds.cityname.gov/geographies/geography/1.1.0"  |
+| `url`                | URL   | Optional | Location of API endpoint url. Required if the API is unauthenticated and public, optional if endpoint is authenticated and private. E.g. "https://SPP.cityname.gov/geographies/geography/1.1.0"  |
 | `available_fields`   | Array | Optional | Array of optional field names provided by the agency. Can be omitted if none are required. Use dot notation for nested fields. See **special notes** below. |
 
 **Special notes about `required_fields` and `disallowed_fields`.**
 
-- All fields marked 'Required' in MDS are still included by default and should not be enumerated in `required_fields`. They are not affected by the Requirements endpoint, unless explicitly listed in `disallowed_fields`.
-- Fields in MDS marked 'Required if available' are still returned if available, and are not affected by the Requirements endpoint, unless explicitly listed in `disallowed_fields`.
-- If a 'Required' or 'Required if available' or 'Optional' field in MDS is listed in `disallowed_fields`, those fields should not be returned by the provider in the endpoint. The field (and therefore its value) must be completely removed from the response. If used, [schema](/schema) validation may fail on missing required fields.
+- All fields marked 'Required' in SPP are still included by default and should not be enumerated in `required_fields`. They are not affected by the Requirements endpoint, unless explicitly listed in `disallowed_fields`.
+- Fields in SPP marked 'Required if available' are still returned if available, and are not affected by the Requirements endpoint, unless explicitly listed in `disallowed_fields`.
+- If a 'Required' or 'Required if available' or 'Optional' field in SPP is listed in `disallowed_fields`, those fields should not be returned by the provider in the endpoint. The field (and therefore its value) must be completely removed from the response. If used, [schema](/schema) validation may fail on missing required fields.
 - To reference fields that are lower in a heirarchy, use [dot separated notation](https://docs.oracle.com/en/database/oracle/oracle-database/18/adjsn/simple-dot-notation-access-to-json-data.html#GUID-7249417B-A337-4854-8040-192D5CEFD576), where a dot between field names represents one nested level deeper into the data structure. E.g. 'gps.heading' or 'features.properties.rules.vehicle_type_id'.
 - To require [Greography Driven Events](/general-information.md#geography-driven-events), simply include the `event_geographies` field for either the Agency or Provider API `api_name`. Per how GDEs work, `event_location` will then not be returned, and the `changed_geographies` vehicle state `event_type` will be used.
-- [While in beta](#beta-limitations), items marked as required or disallowed will only be considered a 'request' by providers, unless agencies have communicated with providers outside of MDS.
+- [While in beta](#beta-limitations), items marked as required or disallowed will only be considered a 'request' by providers, unless agencies have communicated with providers outside of SPP.
 
 [Top][toc]
 
