@@ -1,6 +1,6 @@
 # Mobility Data Specification: Policy
 
-<a href="/policy/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Policy Icon" border="0"></a>
+<a href="/policy/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Policy Icon" border="0"></a>
 
 The Policy API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Policy API to get information about local rules that may affect the operation of their mobility service or which may be used to determine compliance.
 

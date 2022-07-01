@@ -1,6 +1,6 @@
 # Mobility Data Specification: Jurisdiction
 
-<a href="/jurisdiction/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Jurisdiction Icon" border="0"></a>
+<a href="/jurisdiction/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Jurisdiction Icon" border="0"></a>
 
 This specification details the purpose, use cases, and schema for Jurisdictions. Jurisdictions are an optional service that are served by a coordinated group of agencies. Jurisdictions can be '[optionally authenticated](/general-information.md#optional-authentication)', making the endpoints unauthenticated and public. In the future this will shift to 'optionally private', where Jursidictions will be public by default. Note that it serves a different purpose from the [Geography](/geography) API, though it does reference areas within Geography by ID.
 

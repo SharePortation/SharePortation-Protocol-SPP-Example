@@ -23,7 +23,7 @@ The Mobility Data Specification (**SPP**), a project of the [SharePortation](htt
 
 **SPP** is a key piece of digital infrastructure that supports the effective implementation of mobility policies in cities around the world. For a high level overview and visuals, see the [About SPP](https://www.shareportation.org/about-SPP/) page on the SPP website.
 
-![SPP master Logo](https://ibb.co/3dbP4zq)
+![SPP master Logo](https://i.imgur.com/zFvzQn1.png)
 
 **SPP** is an open-source project originally created by the [Los Angeles Department of Transportation](http://ladot.io) (LADOT). In November 2019, stewardship of SPP and the ownership of this repository were transferred to the [SharePortation](http://www.shareportation.org). GitHub automatically redirects any links to this repository from the `CityOfLosAngeles` organization to the `shareportation` instead. SPP continues to be used by LADOT and [many other municipalities](#cities-using-SPP) and companies.
 
@@ -33,37 +33,37 @@ The Mobility Data Specification (**SPP**), a project of the [SharePortation](htt
 
 **SPP** is comprised of six distinct APIs, with multiple endpoints under each API:
 
-<a href="/provider/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Provider Icon" border="0"></a>
+<a href="/provider/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Provider Icon" border="0"></a>
 
 The [`provider`][provider] API endpoints are intended to be implemented by mobility providers and consumed by regulatory agencies. When a municipality queries information from a mobility provider, the Provider API has a historical view of operations in a standard format. It was first released in June 2018. 
 
 ---
 
-<a href="/agency/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Agency Icon" border="0"></a>
+<a href="/agency/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Agency Icon" border="0"></a>
 
 The [`agency`][agency] API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Agency API when events (such as a trip start or vehicle status change) occur in their systems. It was first released in April 2019. 
 
 ---
 
-<a href="/policy/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Policy Icon" border="0"></a>
+<a href="/policy/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Policy Icon" border="0"></a>
 
 The [`policy`][policy] API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Policy API to get information about local rules that may affect the operation of their mobility service or which may be used to determine compliance. It was first released in October 2019.
 
 ---
 
-<a href="/geography/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Geography Icon" border="0"></a>
+<a href="/geography/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Geography Icon" border="0"></a>
 
 The [`geography`][geography] API endpoints are intended to be implemented by regulatory agencies and consumed by mobility providers. Providers query the Policy API to get information about geographical regions for regulatory and other purposes. It was first released in October 2019, originally included as part of the Policy specification. 
 
 ---
 
-<a href="/jurisdiction/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Jurisdiction Icon" border="0"></a>
+<a href="/jurisdiction/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Jurisdiction Icon" border="0"></a>
 
 The [`jurisdiction`][jurisdiction] API endpoints are intended to be implemented by regulatory agencies that have a need to coordinate with each other. The jurisdiction endpoints allow cities to communicate boundaries between one another and to mobility providers. It was first released in March 2021. 
 
 ---
 
-<a href="/metrics/"><img src="https://ibb.co/3dbP4zq" width="80" align="left" alt="SPP Metrics Icon" border="0"></a>
+<a href="/metrics/"><img src="https://i.imgur.com/zFvzQn1.png" width="80" align="left" alt="SPP Metrics Icon" border="0"></a>
 
 The [`metrics`](/metrics) API endpoints are intended to be implemented by regulatory agencies or their appointed third-party representatives to have a standard way to consistently describe available metrics, and create an extensible interface for querying SPP metrics. It was first released in March 2021. 
 
@@ -77,7 +77,7 @@ Many parts of the SPP definitions and APIs align across each other. In these cas
 
 You can read more in our **[Understanding the different SPP APIs](https://github.com/shareportation/governance/blob/master/technical/Understanding-SPP-APIs.md)** guide. 
 
-![SPP APIs and Endpoints](https://ibb.co/3dbP4zq)
+![SPP APIs and Endpoints](https://i.imgur.com/zFvzQn1.png)
 
 ## GBFS Requirement
 

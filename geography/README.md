@@ -1,6 +1,6 @@
 # Mobility Data Specification: Geography
 
-<a href="/geography/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Geography Icon" border="0"></a>
+<a href="/geography/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Geography Icon" border="0"></a>
 
 This specification contains a collection of RESTful APIs used to read Geographies (descriptions of geographical information, e.g. multi-polygons, currently represented via GeoJSON).
 
