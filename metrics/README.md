@@ -1,4 +1,4 @@
-# Mobility Data Specification: Metrics
+# SharePortation: Metrics
 
 <a href="/metrics/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Metrics Icon" border="0"></a>
 

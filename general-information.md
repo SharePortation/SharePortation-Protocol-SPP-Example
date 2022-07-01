@@ -1,4 +1,4 @@
-# Mobility Data Specification: **General information**
+# SharePortation: **General information**
 
 This document contains specifications that are shared between the various SPP APIs such as [`agency`][agency], [`policy`][policy], [`provider`][provider], etc.
 

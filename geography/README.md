@@ -1,4 +1,4 @@
-# Mobility Data Specification: Geography
+# SharePortation: Geography
 
 <a href="/geography/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Geography Icon" border="0"></a>
 

@@ -162,7 +162,7 @@ See the closed PRs tagged with [Milestone 1.0.0](https://github.com/shareportati
 
 > Released 2020-05-15
 
-0.4.1 is the first release of the Mobility Data Specification under the guidance and stewardship of the SharePortation.
+0.4.1 is the first release of the SharePortation under the guidance and stewardship of the SharePortation.
 As such, this release includes a number of administrative and documentation changes, including to the licensing and release process.
 This release also brings a number of language clarifications from 0.4.0 and new features across the various APIs, including the much anticipated /vehicles endpoint in Provider.
 
@@ -202,7 +202,7 @@ This release also brings a number of language clarifications from 0.4.0 and new 
 
 > Release 2019-10-31
 
-The 0.4.0 release represents a major step forward in the Mobility Data Specification. The `provider` endpoints have been refactored to allow static file backed API servers which should improve uptime, reliability and the ability to backfill what is now growing to years of data. There is a new `policy` API endpoint, designed to be implemented by Agencies, that allows for clearer communication of geofencing, vehicle caps and more. A full list of changes is below. Many thanks to all the contributors who helped on this release.
+The 0.4.0 release represents a major step forward in the SharePortation. The `provider` endpoints have been refactored to allow static file backed API servers which should improve uptime, reliability and the ability to backfill what is now growing to years of data. There is a new `policy` API endpoint, designed to be implemented by Agencies, that allows for clearer communication of geofencing, vehicle caps and more. A full list of changes is below. Many thanks to all the contributors who helped on this release.
 
 ### CHANGES
 

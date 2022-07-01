@@ -1,4 +1,4 @@
-# Mobility Data Specification: Jurisdiction
+# SharePortation: Jurisdiction
 
 <a href="/jurisdiction/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Jurisdiction Icon" border="0"></a>
 

@@ -1,4 +1,4 @@
-# Mobility Data Specification: **Provider**
+# SharePortation: **Provider**
 
 <a href="/provider/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Provider Icon" border="0"></a>
 

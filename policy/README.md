@@ -1,4 +1,4 @@
-# Mobility Data Specification: Policy
+# SharePortation: Policy
 
 <a href="/policy/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Policy Icon" border="0"></a>
 

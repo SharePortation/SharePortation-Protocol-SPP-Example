@@ -1,4 +1,4 @@
-# Mobility Data Specification
+# SharePortation
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@
 
 # About
 
-The Mobility Data Specification (**SPP**), a project of the [SharePortation](http://www.shareportation.org) (**SPP**), is a set of Application Programming Interfaces (APIs) focused on shared mobility services such as dockless scooters, bicycles, mopeds, and carshare, and inspired by projects like [GTFS](https://developers.google.com/transit/gtfs/reference/) and [GBFS](https://github.com/NABSA/gbfs). SPP is a digital tool that helps cities better manage transportation in the public right of way, standardizing communication and data-sharing between cities and private mobility providers, allowing cities to share and validate policy digitally, and enabling vehicle management and better outcomes for residents. 
+The SharePortation (**SPP**), a project of the [SharePortation](http://www.shareportation.org) (**SPP**), is a set of Application Programming Interfaces (APIs) focused on shared mobility services such as dockless scooters, bicycles, mopeds, and carshare, and inspired by projects like [GTFS](https://developers.google.com/transit/gtfs/reference/) and [GBFS](https://github.com/NABSA/gbfs). SPP is a digital tool that helps cities better manage transportation in the public right of way, standardizing communication and data-sharing between cities and private mobility providers, allowing cities to share and validate policy digitally, and enabling vehicle management and better outcomes for residents. 
 
 **SPP** is a key piece of digital infrastructure that supports the effective implementation of mobility policies in cities around the world. For a high level overview and visuals, see the [About SPP](https://www.shareportation.org/about-SPP/) page on the SPP website.
 
@@ -89,7 +89,7 @@ All SPP compatible Provider feeds [must also expose](/provider/README.md#gbfs) a
 
 To stay up to date on SPP, please **subscribe to the [SPP-announce](https://groups.google.com/a/groups.shareportation.org/g/SPP-announce) mailing list** for general updates, the **[wg-SPP](https://groups.google.com/a/groups.shareportation.org/g/wg-SPP) mailing list** for Working Group details and meetings, and read our **[Community Wiki](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki)**.
 
-The Mobility Data Specification is an open source project with all development taking place on GitHub and public meetings through our [SPP Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions), [creating an issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues), suggesting changes with [a pull request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/master/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
+The SharePortation is an open source project with all development taking place on GitHub and public meetings through our [SPP Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/SPP-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions), [creating an issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues), suggesting changes with [a pull request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/master/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
 
 **Read our [How to Get Involved in the SharePortation](https://www.shareportation.org/how-to-get-involved-in-the-open-mobility-foundation/) blog post for more detail and an overview of how the SPP is organized.**
 
