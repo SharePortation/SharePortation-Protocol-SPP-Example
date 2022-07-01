@@ -1,6 +1,6 @@
 # Mobility Data Specification: **Provider**
 
-<a href="/provider/"><img src="https://ibb.co/3dbP4zq" width="120" align="right" alt="SPP Provider Icon" border="0"></a>
+<a href="/provider/"><img src="https://i.imgur.com/zFvzQn1.png" width="120" align="right" alt="SPP Provider Icon" border="0"></a>
 
 The Provider API endpoints are intended to be implemented by mobility providers and consumed by regulatory agencies. When a municipality queries information from a mobility provider, the Provider API has a historical view of operations in a standard format.
 
