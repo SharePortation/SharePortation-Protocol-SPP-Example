@@ -345,7 +345,7 @@ The authenticated reports are monthly, historic flat files that may be pre-gener
 
 **Endpoint:** `/reports`  
 **Method:** `GET`  
-**[Beta feature][beta]:** Yes (as of 1.1.0). [Leave feedback](https://github.com/shareportation/mobility-data-specification/issues/672)  
+**[Beta feature][beta]:** Yes (as of 1.1.0). [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/672)  
 **Schema:** TBD when out of beta  
 **`data` Filename:** monthly file named by year and month, e.g. `/reports/YYYY-MM.csv`  
 **`data` Payload:** monthly CSV files with the following structure: 
@@ -445,11 +445,11 @@ Other special group types may be added in future MDS releases as relevant agency
 
 ### Data Redaction
 
-Some combinations of parameters may return a small count of trips, which could increase a privacy risk of re-identification. To correct for that, Reports does not return data below a certain count of results. This data redaction is called k-anonymity, and the threshold is set at a k-value of 10. For more explanation of this methodology, see our [Data Redaction Guidance document](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Data-Redaction).
+Some combinations of parameters may return a small count of trips, which could increase a privacy risk of re-identification. To correct for that, Reports does not return data below a certain count of results. This data redaction is called k-anonymity, and the threshold is set at a k-value of 10. For more explanation of this methodology, see our [Data Redaction Guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Data-Redaction).
 
 **If the query returns fewer than `10` trips in a count, then that row's count value is returned as "-1".** Note "0" values are also returned as "-1" since the goal is to group both low and no count values for privacy. 
 
-As Reports is in [beta][beta], this value may be adjusted in future releases and/or may become dynamic to account for specific categories of use cases and users. To improve the specification and to inform future guidance, beta users are encouraged to share their feedback and questions about k-values on this [discussion thread](https://github.com/shareportation/mobility-data-specification/discussions/622).
+As Reports is in [beta][beta], this value may be adjusted in future releases and/or may become dynamic to account for specific categories of use cases and users. To improve the specification and to inform future guidance, beta users are encouraged to share their feedback and questions about k-values on this [discussion thread](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions/622).
 
 Using k-anonymity will reduce, but not necessarily eliminate the risk that an individual could be re-identified in a dataset, and this data should still be treated as sensitive. This is just one part of good privacy protection practices, which you can read more about in our [MDS Privacy Guide for Cities](https://github.com/shareportation/governance/blob/main/documents/SPP-MDS-Privacy-Guide-for-Cities.pdf). 
 
@@ -461,7 +461,7 @@ Using k-anonymity will reduce, but not necessarily eliminate the risk that an in
 
 All MDS compatible `provider` APIs must expose a public [GBFS](https://github.com/NABSA/gbfs) feed as well. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility.
 
-GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [MDS Vehicles Guide](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on MDS and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_MDS.md).
+GBFS 2.0 includes some changes that may make it less useful for regulatory purposes (specifically, the automatic rotation of vehicle IDs). The [`/vehicles`](#vehicles) endpoint offers an alternative to GBFS that may more effectively meet the use cases of regulators. See our [MDS Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Additional information on MDS and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_MDS.md).
 
 [Top][toc]
 
@@ -530,7 +530,7 @@ In addition to the standard [Provider payload wrapper](#response-format), respon
 
 **Endpoint:** `/stops/:stop_id`  
 **Method:** `GET`  
-**[Beta feature][beta]:** Yes (as of 1.0.0). [Leave feedback](https://github.com/shareportation/mobility-data-specification/issues/638)  
+**[Beta feature][beta]:** Yes (as of 1.0.0). [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/638)  
 **Schema:** [`stops` schema][stops-schema]  
 **`data` Payload:** `{ "stops": [] }`, an array of [Stops][stops]
 
@@ -544,7 +544,7 @@ The `/vehicles` is a near-realtime endpoint and returns the current status of ve
 
 Data in this endpoint should reconcile with data from the historic [`/status_changes`](/provider#status-changes) enpdoint, though `/status_changes` is the source of truth if there are discrepancies. 
 
-As with other MDS APIs, `/vehicles` is intended for use by regulators, not by the general public. `/vehicles` can be deployed by providers as a standalone MDS endpoint for agencies without requiring the use of other endpoints, due to the [modularity](/README.md#modularity) of MDS. See our [MDS Vehicles Guide](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Note that using authenticated `/vehicles` does not replace the role of a public [GBFS][gbfs] feed in enabling consumer-facing applications. If a provider is using both `/vehicles` and GBFS endpoints, the `/vehicles` endpoint should be considered source of truth regarding an agency's compliance checks.
+As with other MDS APIs, `/vehicles` is intended for use by regulators, not by the general public. `/vehicles` can be deployed by providers as a standalone MDS endpoint for agencies without requiring the use of other endpoints, due to the [modularity](/README.md#modularity) of MDS. See our [MDS Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for how this compares to GBFS `/free_bike_status`. Note that using authenticated `/vehicles` does not replace the role of a public [GBFS][gbfs] feed in enabling consumer-facing applications. If a provider is using both `/vehicles` and GBFS endpoints, the `/vehicles` endpoint should be considered source of truth regarding an agency's compliance checks.
 
 In addition to the standard [Provider payload wrapper](#response-format), responses from this endpoint should contain the last update timestamp and amount of time until the next update in accordance with the [Data Latency Requirements][data-latency]:
 

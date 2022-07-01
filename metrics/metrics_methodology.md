@@ -458,7 +458,7 @@ Provided pre-calculated **trips.start.count** and **dockless.avg**, the **dockle
 
 ## Compatibility with Mobility Data Collaborative Metrics
 
-The table below maps MDS Metrics to Mobility Data Collaborative (MDC) [Glossary Metrics](https://github.com/shareportation/mobility-data-specification/files/4659200/MDCGlossaryMetrics02202004.pdf).[**](#footnotes)   
+The table below maps MDS Metrics to Mobility Data Collaborative (MDC) [Glossary Metrics](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/files/4659200/MDCGlossaryMetrics02202004.pdf).[**](#footnotes)   
 
 | MDS Core Metrics                                 | MDC Metrics                                                                                            |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |

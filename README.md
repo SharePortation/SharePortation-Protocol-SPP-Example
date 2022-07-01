@@ -71,7 +71,7 @@ The [`metrics`](/metrics) API endpoints are intended to be implemented by regula
 
 ## Modularity
 
-MDS is designed to be a modular kit-of-parts. Regulatory agencies can use the components of the API that are appropriate for their needs. An agency may choose to use only `agency`, `provider`, or `policy`. Other APIs like `geography`, `jurisdiction`, and `metrics` can be used in coordination as described with these APIs or sometimes on their own. Or agencies may select specific elements (endpoints) from each API to help them implement their goals. Development of the APIs takes place under the guidance of the SPP's [MDS Working Group](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Working-Group).
+MDS is designed to be a modular kit-of-parts. Regulatory agencies can use the components of the API that are appropriate for their needs. An agency may choose to use only `agency`, `provider`, or `policy`. Other APIs like `geography`, `jurisdiction`, and `metrics` can be used in coordination as described with these APIs or sometimes on their own. Or agencies may select specific elements (endpoints) from each API to help them implement their goals. Development of the APIs takes place under the guidance of the SPP's [MDS Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Working-Group).
 
 Many parts of the MDS definitions and APIs align across each other. In these cases, consolidated information can be found on the [General Information](/general-information.md) page.
 
@@ -81,15 +81,15 @@ You can read more in our **[Understanding the different MDS APIs](https://github
 
 ## GBFS Requirement
 
-All MDS compatible Provider feeds [must also expose](/provider/README.md#gbfs) a public [GBFS](https://github.com/NABSA/gbfs) feed. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility. See our [MDS Vehicles Guide](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Vehicles) for how MDS Provider `/vehicles` can be used by regulators instead of the public GBFS `/free_bike_status`. Additional information on MDS and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_MDS.md).
+All MDS compatible Provider feeds [must also expose](/provider/README.md#gbfs) a public [GBFS](https://github.com/NABSA/gbfs) feed. Compatibility with [GBFS 2.0](https://github.com/NABSA/gbfs/blob/v2.0/gbfs.md) or greater is advised due to privacy concerns and support for micromobility. See our [MDS Vehicles Guide](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for how MDS Provider `/vehicles` can be used by regulators instead of the public GBFS `/free_bike_status`. Additional information on MDS and GBFS can be found in this [guidance document](https://github.com/shareportation/governance/blob/main/technical/GBFS_and_MDS.md).
 
 [Top][toc]
 
 # Get Involved
 
-To stay up to date on MDS, please **subscribe to the [mds-announce](https://groups.google.com/a/groups.shareportation.org/g/mds-announce) mailing list** for general updates, the **[wg-mds](https://groups.google.com/a/groups.shareportation.org/g/wg-mds) mailing list** for Working Group details and meetings, and read our **[Community Wiki](https://github.com/shareportation/mobility-data-specification/wiki)**.
+To stay up to date on MDS, please **subscribe to the [mds-announce](https://groups.google.com/a/groups.shareportation.org/g/mds-announce) mailing list** for general updates, the **[wg-mds](https://groups.google.com/a/groups.shareportation.org/g/wg-mds) mailing list** for Working Group details and meetings, and read our **[Community Wiki](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki)**.
 
-The Mobility Data Specification is an open source project with all development taking place on GitHub and public meetings through our [MDS Working Group](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/mobility-data-specification/discussions), [creating an issue](https://github.com/shareportation/mobility-data-specification/issues), suggesting changes with [a pull request](https://github.com/shareportation/mobility-data-specification/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/main/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
+The Mobility Data Specification is an open source project with all development taking place on GitHub and public meetings through our [MDS Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Working-Group). Comments and ideas can be shared by [starting a discussion](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions), [creating an issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues), suggesting changes with [a pull request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls), and attending meetings. Before contributing, please review our SPP [CONTRIBUTING](https://github.com/shareportation/governance/blob/main/CONTRIBUTING.md) and [CODE OF CONDUCT](https://github.com/shareportation/governance/blob/main/CODE_OF_CONDUCT.md) pages to understand guidelines and policies for participation.
 
 **Read our [How to Get Involved in the SharePortation](https://www.shareportation.org/how-to-get-involved-in-the-open-mobility-foundation/) blog post for more detail and an overview of how the SPP is organized.**
 
@@ -104,8 +104,8 @@ SPP Members (public agencies and commercial companies) have additional participa
 - [Technology Council](https://github.com/shareportation/governance/wiki/Technology-Council)
 - [Strategy Committee](https://github.com/shareportation/governance/wiki/Strategy-Committee)
 - [Advisory Committee](https://github.com/shareportation/governance/wiki/Advisory-Committee)
-- Steering committees of all [Working Groups](https://github.com/shareportation/mobility-data-specification/wiki#SPP-meetings), currently:
-  - [MDS Working Group](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Working-Group)
+- Steering committees of all [Working Groups](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki#SPP-meetings), currently:
+  - [MDS Working Group](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Working-Group)
   - [Curb Working Group](https://github.com/shareportation/curb-data-specification/wiki)
 
 Read about [how to become an SPP member](https://www.shareportation.org/how-to-become-a-member/), [how to get involved and our governance model](https://www.shareportation.org/how-to-get-involved-in-the-open-mobility-foundation/), and [contact us](https://mailchi.mp/shareportation/membership) for more details. 
@@ -120,13 +120,13 @@ The SPP provides guidance on upgrading for cities, providers, and software compa
 
 ## Technical Information
 
-The latest MDS release is in the [`main`](https://github.com/shareportation/mobility-data-specification/tree/main) branch, and development for the next release occurs in the [`dev`](https://github.com/shareportation/mobility-data-specification/tree/dev) branch.
+The latest MDS release is in the [`main`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main) branch, and development for the next release occurs in the [`dev`](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) branch.
 
-The MDS specification is versioned using Git tags and [semantic versioning](https://semver.org/). See prior [releases](https://github.com/shareportation/mobility-data-specification/releases) and the [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md) for more information and [version support](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md#ongoing-version-support).
+The MDS specification is versioned using Git tags and [semantic versioning](https://semver.org/). See prior [releases](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/releases) and the [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md) for more information and [version support](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md#ongoing-version-support).
 
-* [Latest Release Branch](https://github.com/shareportation/mobility-data-specification/tree/main) (main)
-* [Development Branch](https://github.com/shareportation/mobility-data-specification/tree/dev) (dev)
-* [All GitHub Releases](https://github.com/shareportation/mobility-data-specification/releases)
+* [Latest Release Branch](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main) (main)
+* [Development Branch](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/dev) (dev)
+* [All GitHub Releases](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/releases)
 * [MDS Releases](https://github.com/shareportation/governance/wiki/Releases) - current/recommended versions, timeline
 * [Release Guidelines](https://github.com/shareportation/governance/blob/main/technical/ReleaseGuidelines.md)
 
@@ -137,9 +137,9 @@ The MDS specification is versioned using Git tags and [semantic versioning](http
 More than 150 cities and public agencies across 6 continents around the world use MDS, and it has been implemented by most major [mobility service providers](#providers-using-mds).  
 - See our **[list of cities using MDS](https://www.shareportation.org/mds-users/#cities-using-mds)** with links to public mobility websites and policy/permit documents.
 
-Please let us know [via our website](https://www.shareportation.org/get-in-touch/) or in the [public discussion area](https://github.com/shareportation/mobility-data-specification/discussions) if you are an agency using MDS so we can add you to the city resource list, especially if you have published your policies or documents publicly.
+Please let us know [via our website](https://www.shareportation.org/get-in-touch/) or in the [public discussion area](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/discussions) if you are an agency using MDS so we can add you to the city resource list, especially if you have published your policies or documents publicly.
 
-To add yourself to the [agency list](/agencies.csv) and add your [Policy Requirement link](/provider.md#requirements), please let us know [via our website](https://www.shareportation.org/get-in-touch/) or open an [Issue](https://github.com/shareportation/mobility-data-specification/issues) or [Pull Request](https://github.com/shareportation/mobility-data-specification/pulls). Find out how in our [Adding an Agency ID](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Agency-ID) help document.
+To add yourself to the [agency list](/agencies.csv) and add your [Policy Requirement link](/provider.md#requirements), please let us know [via our website](https://www.shareportation.org/get-in-touch/) or open an [Issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues) or [Pull Request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls). Find out how in our [Adding an Agency ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID) help document.
 
 [Top][toc]
 
@@ -149,7 +149,7 @@ Over two dozen mobility service providers (MSPs) around the world use MDS, allow
 
 - See our **[list of providers using MDS](https://www.shareportation.org/mds-users/#mobility-providers-using-mds)**. For a table list with unique IDs, see the MDS [provider list](/providers.csv).
 
-To add yourself to the provider list, please let us know [via our website](https://www.shareportation.org/get-in-touch/) or open an [Issue](https://github.com/shareportation/mobility-data-specification/issues) or [Pull Request](https://github.com/shareportation/mobility-data-specification/pulls). Find out how in our [Adding an Provider ID](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Provider-ID) help document.
+To add yourself to the provider list, please let us know [via our website](https://www.shareportation.org/get-in-touch/) or open an [Issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues) or [Pull Request](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/pulls). Find out how in our [Adding an Provider ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Provider-ID) help document.
 
 [Top][toc]
 
@@ -170,9 +170,9 @@ MDS includes information about vehicles, their location, and trips taken on thos
 * [MDS Privacy Guide for Cities](https://github.com/shareportation/governance/raw/main/documents/SPP-MDS-Privacy-Guide-for-Cities.pdf) - guide that covers essential privacy topics and best practices
 * [The Privacy Principles for Mobility Data](https://www.mobilitydataprivacyprinciples.org/) - principles endorsed by the SPP and other mobility organizations to guide the mobility ecosystem in the responsible use of data and the protection of individual privacy
 * [Mobility Data State of Practice](https://github.com/shareportation/privacy-committee/blob/main/products/state-of-the-practice.md) -  real-world examples related to the handling and protection of MDS and other types of mobility data
-* [Understanding the Data in MDS](https://github.com/shareportation/mobility-data-specification/wiki/Understanding-the-Data-in-MDS) - technical document outlining what data is (and is not) in MDS
+* [Understanding the Data in MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Understanding-the-Data-in-MDS) - technical document outlining what data is (and is not) in MDS
 * [Use Case Database](https://www.shareportation.org/whats-possible-with-mds/) - a starting point for understanding how MDS can be used, and what parts of MDS is required to meet those use cases
-* [Policy Requirements](https://github.com/shareportation/mobility-data-specification/tree/main/policy#requirement) - built into MDS, allowing agencies to specify only the endpoints and fields needed for program regulation
+* [Policy Requirements](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/main/policy#requirement) - built into MDS, allowing agencies to specify only the endpoints and fields needed for program regulation
 * Using MDS Under GDPR (link coming soon) - how to use MDS in the context of GDPR in Europe
 
 The SPP’s [Privacy, Security, and Transparency Committee](https://github.com/shareportation/privacy-committee#welcome-to-the-privacy-security-and-transparency-committee) creates many of these resources, and advises the SPP on principles and practices that ensure the secure handling of mobility data. The committee – which is composed of both private and public sector SPP members – also holds regular public meetings, which provide additional resources and an opportunity to discuss issues related to privacy and mobility data. Learn more [here](https://github.com/shareportation/privacy-committee#welcome-to-the-privacy-security-and-transparency-committee).

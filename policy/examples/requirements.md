@@ -101,7 +101,7 @@ Version 1.2.0 of MDS Policy and Geography for agencies to publish rules/fees/inc
 
 ## Vehicles Only
 
-Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for bicycles, requiring only the Provider `/vehicles` endpoint and no optional fields, as an authenticated [alternative to GBFS](https://github.com/shareportation/mobility-data-specification/wiki/MDS-Vehicles) for internal use, while still requiring GBFS 2.1 for the public.
+Version 1.1.0 for one provider with scooters, and 1.0.0 for another provider for bicycles, requiring only the Provider `/vehicles` endpoint and no optional fields, as an authenticated [alternative to GBFS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/MDS-Vehicles) for internal use, while still requiring GBFS 2.1 for the public.
 
 ```json
 {

@@ -7,11 +7,11 @@ assignees: ''
 
 ---
 
-**Note:** See the [Adding an MDS Agency ID](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Agency-ID) page for more help.
+**Note:** See the [Adding an MDS Agency ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID) page for more help.
 
 Opening this issue will allow you as a city or governmental agency get an official agency ID for use across MDS globally, and include in your Requirements URL.
 
-**Fields needed from you for the [agencies.csv file](https://github.com/shareportation/mobility-data-specification/blob/main/agencies.csv).**
+**Fields needed from you for the [agencies.csv file](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/main/agencies.csv).**
 
 _All fields are required._
 

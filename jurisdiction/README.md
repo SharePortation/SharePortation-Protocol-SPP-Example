@@ -35,9 +35,9 @@ A jurisdiction is:
 
 ## Beta Feature
 
-The Jurisdictions API and all of its endpoints are marked as a [beta feature](https://github.com/shareportation/mobility-data-specification/blob/feature-metrics/general-information.md#beta-features) starting in the 1.1.0 release. It has not been tested in real world scenarios, and may be adjusted in future releases.
+The Jurisdictions API and all of its endpoints are marked as a [beta feature](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/feature-metrics/general-information.md#beta-features) starting in the 1.1.0 release. It has not been tested in real world scenarios, and may be adjusted in future releases.
 
-**[Beta feature](https://github.com/shareportation/mobility-data-specification/blob/feature-metrics/general-information.md#beta-features)**: _Yes (as of 1.1.0)_. [Leave feedback](https://github.com/shareportation/mobility-data-specification/issues/673) 
+**[Beta feature](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/feature-metrics/general-information.md#beta-features)**: _Yes (as of 1.1.0)_. [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/673) 
 
 ## Use Cases
 

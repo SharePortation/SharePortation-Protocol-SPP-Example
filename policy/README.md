@@ -158,7 +158,7 @@ Policies will be returned in order of effective date (see schema below), with pa
 
 **Endpoint**: `/requirements/`  
 **Method**: `GET`  
-**[Beta feature](/general-information.md#beta-features)**: *Yes (as of 1.2.0)*. [Leave feedback](https://github.com/shareportation/mobility-data-specification/issues/682)  
+**[Beta feature](/general-information.md#beta-features)**: *Yes (as of 1.2.0)*. [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/682)  
 **Schema:** TBD when out of beta
 **`data` Payload**: `{ requirements: [] }`, JSON objects that follow the schema [outlined here](#requirement).  
 
@@ -342,7 +342,7 @@ An individual `Rule` object is defined by the following fields:
 ### Rates
 Rate-related properties can currently be specified on `rate` and `time` Rules. Note: A future MDS version will likely support rates for `count` and `speed` rules, but their behavior is currently undefined.
 
-**[Beta feature](/general-information.md#beta-features)**: *Yes (as of 1.0.0)*. [Leave feedback](https://github.com/shareportation/mobility-data-specification/issues/674)  
+**[Beta feature](/general-information.md#beta-features)**: *Yes (as of 1.0.0)*. [Leave feedback](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/674)  
 
 #### Rate Amounts
 The amount of a rate applied when this rule applies, if applicable (default zero). A positive integer rate amount represents a fee, while a negative integer represents a subsidy. Rate amounts are given in the `currency` defined in the [Policy](#policy).
@@ -430,7 +430,7 @@ See [Policy Requirements Examples](/policy/examples/requirements.md) for ideas o
 
 #### Public Hosting
 
-This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/mobility-data-specification/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/main/technical/SPP-MDS-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with MDS you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Agency-ID).
+This endpoint is not authenticated (ie. public), and allows the discovery of other public endpoints within Geography, Policy, and Jurisdiction. The agency can host this as a file or dynamic endpoint on their servers, on a third party server, or the SPP can host on behalf of an agency in the [agency program requirements repo](https://github.com/shareportation/agency-program-requirements). See this [hosting guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Policy-Requirements-SPP-Hosting-Guidance) for more information.  This requirements file can be [referenced directly](https://github.com/shareportation/governance/blob/main/technical/SPP-MDS-Policy-Language-Guidance.md) in an agency's operating permit/policy document when discussing program data requirements, and [updated digitally as needed](#requirement-update-frequency). To be compliant with MDS you must obtain an `agency_id` and list your public URL in [agencies.csv](/agencies.csv), per our [guidance document](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID).
 
 #### Requirement Update Frequency
 
@@ -526,13 +526,13 @@ Contains metadata applicable to the agency and at the top of its [Requirement](#
 | `file_version`               | integer         | Required | Version of this file. Increment 1 with each modification. See [version tracking](#version-tracking) for details. E.g. "3" |
 | `last_updated`               | [timestamp][ts] | Required | When this file `version` was last updated. See [version tracking](#version-tracking) for details. E.g. "1611958740" |
 | `max_update_interval`        | duration        | Required | The expected maximum frequency with which this file could be updated. [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). E.g. "P1M" |
-| `agency_id`                  | UUID            | Required | UUID of the agency this file applies to. Must come from [agencies.csv](/agencies.csv) file, per [guidance](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Agency-ID). E.g. "737a9c62-c0cb-4c93-be43-271d21b784b5" |
+| `agency_id`                  | UUID            | Required | UUID of the agency this file applies to. Must come from [agencies.csv](/agencies.csv) file, per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID). E.g. "737a9c62-c0cb-4c93-be43-271d21b784b5" |
 | `agency_name`                | text            | Required | Name of the agency this file applies to. E.g. "Louisville Metro" |
 | `agency_timezone`            | timezone        | Required | [TZ Database Name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) used for dates and times in Requirements and across all MDS endpoints. E.g. "America/New_York" |
 | `agency_language`            | text            | Required | An [IETF BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language code, used across all MDS endpoints. E.g. "en-US" |
 | `agency_currency`            | text            | Required | Currency used for all monetary values across all MDS endpoints. E.g. "USD" |
 | `agency_website_url`         | URL             | Required | URL of the agency's general transportation page. E.g. "https://www.cityname.gov/transportation/" |
-| `url`                        | URL             | Required | URL of this file. Must be added to [agencies.csv](/agencies.csv), per [guidance](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Agency-ID). E.g.  "https://mds.cityname.gov/requirements/1.2.0" |
+| `url`                        | URL             | Required | URL of this file. Must be added to [agencies.csv](/agencies.csv), per [guidance](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Agency-ID). E.g.  "https://mds.cityname.gov/requirements/1.2.0" |
 
 [Top][toc]
 
@@ -611,7 +611,7 @@ For each combination of items in a program, you can specify the data specs, APIs
 
 | Name                 | Type   | Required / Optional | Description              |
 | -------------------- | ------ | -------- | ----------------------------------- |
-| `data_spec_name`     | Enum   | Required | Name of the data spec required. Supported values are: '[MDS](https://github.com/shareportation/mobility-data-specification/tree/ms-requirements)', '[GBFS](https://github.com/NABSA/gbfs/tree/v2.2)'. Others like GOFS, GTFS, TOMP-API, etc can be tested by agencies and officially standardized here in the future -- leave your feedback on [this issue](https://github.com/shareportation/mobility-data-specification/issues/682). |
+| `data_spec_name`     | Enum   | Required | Name of the data spec required. Supported values are: '[MDS](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/tree/ms-requirements)', '[GBFS](https://github.com/NABSA/gbfs/tree/v2.2)'. Others like GOFS, GTFS, TOMP-API, etc can be tested by agencies and officially standardized here in the future -- leave your feedback on [this issue](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/issues/682). |
 | `version`            | Text   | Required | Version number of the data spec required. E.g. '1.2.0' |
 | `required_apis`      | Array  | Conditionally Required | Name of the [Requirement APIs](#requirement-apis) that need to be served by providers. At least one API is required. APIs not listed will not be available to the agency. |
 | `available_apis`     | Array  | Conditionally Required | Name of the [Requirement APIs](#requirement-apis) that are being served by agencies.  Not applicable to GBFS. APIs not listed will not be available to the provider. |

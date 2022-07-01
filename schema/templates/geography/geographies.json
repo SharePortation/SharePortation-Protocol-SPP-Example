@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/mobility-data-specification/main/geography/geographies.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/geography/geographies.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "The MDS Geographies Schema",
   "type": "object",

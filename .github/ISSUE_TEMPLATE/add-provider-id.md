@@ -7,11 +7,11 @@ assignees: ''
 
 ---
 
-**Note:** See the [Adding an MDS Provider ID](https://github.com/shareportation/mobility-data-specification/wiki/Adding-an-MDS-Provider-ID) page for more help.
+**Note:** See the [Adding an MDS Provider ID](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/wiki/Adding-an-MDS-Provider-ID) page for more help.
 
 Opening this issue will allow you as a mobility service provider get an official provider ID for use across MDS globally.
 
-**Fields needed from you for the [providers.csv file](https://github.com/shareportation/mobility-data-specification/blob/main/providers.csv).**
+**Fields needed from you for the [providers.csv file](https://github.com/shareportation/SharePortation-Protocol-SPP-Example/blob/main/providers.csv).**
 
 _All fields are required._
 

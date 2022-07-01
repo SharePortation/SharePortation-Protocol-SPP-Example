@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/shareportation/mobility-data-specification/main/provider/events.json",
+  "$id": "https://raw.githubusercontent.com/shareportation/SharePortation-Protocol-SPP-Example/main/provider/events.json",
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "Schema for MDS Provider events payloads",
   "type": "object",
